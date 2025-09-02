@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contact - Jane Serenska</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+            <img src="Assets/No Background/jane logo 2.png" alt="Company Logo">
+        </a>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li style="background-color: rgb(255, 251, 0);"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <form action="https://api.web3forms.com/submit" method="POST" id="form">
+        <fieldset>
+          <legend>Contact Form</legend>
+          <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+          <input type="hidden" name="subject" value="New Submission from Web3Forms" />
+          <input type="hidden" name="redirect" value="https://web3forms.com/success" />
+          <input type="checkbox" name="botcheck" id="" style="display: none;" />
+          <div>
+            <label for="name"> Name</label><br>
+            <input type="text" name="name" id="name" placeholder="your name here!" required />
+            <br><br>
+          </div>
+          <div>
+            <label for="email">Email Address</label><br>
+            <input type="email" name="email" id="email" placeholder="you@emailwebsite.com" required /><br><br>
+          </div>
+          <div>
+            <label for="phone">Phone Number</label>
+            <br>
+            <input type="text" name="phone" id="phone" placeholder="+1 (555) 1234-567" required /><br><br>
+          </div>
+          <div>
+            <label for="message">Your Message</label>
+            <br>
+            <textarea rows="5" name="message" id="message" placeholder="Your Message" required></textarea><br><br>
+          </div>
+      
+          <button type="submit"> Send Message </button>
+        </fieldset>
+      </form>
+    </main>
+
+</body>
+
+<footer>
+    <div class="footer-top">
+        <div class="footer-box footer-return-box">
+            <a href="#">Return to Top</a>
+        </div>
+        <div class="footer-box footer-home-box">
+            <a href="index.html">Homepage</a>
+        </div>
+        <div class="footer-box footer-contact-box">
+            <a href="#">Contact</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>2025 Jane Serenska | All Rights Reserved</p>
+    </div>
+</footer>
+
+</html>

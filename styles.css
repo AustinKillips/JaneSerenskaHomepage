@@ -1,0 +1,487 @@
+:root {
+    --bg-color-main: rgba(36, 136, 136, 0.817);
+    --text-color-primary: #140000;
+    --border-color-1: #ccc;
+    --bg-color-menu-item: #ed5b5b;
+    --link-color-hover: #007BFF;
+    --bg-color-link-hover: rgb(255, 251, 0);
+    --border-color-bio: #ed5b5b;
+    --bg-color-bio: #00eaff;
+    --color-gallery: #eee;
+	--color-cod-gray: #111;
+    --c-background-button-netscape: silver;
+    --fluid-font-size: clamp( .8rem, 1vw + .8rem, 2.25rem);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--text-color-primary);
+    background-color: var(--bg-color-main);
+    font-size: var(--fluid-font-size);
+}
+
+
+header {
+    background-color:;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* Stacks the logo and menu vertically on small screens */
+    align-items: center;
+    border-bottom: 1px;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    margin-bottom:;
+}
+
+.menu ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row; /* Stacks menu items vertically */
+    align-items: left;
+    margin-top: -3rem;
+    margin-left: -5rem;
+}
+
+.menu li {
+    margin: 5px 0; /* Adjusts margin for vertical spacing */
+    border: 2px solid var(--border-color-1); /* A simple grey border */
+    background-color:var(--bg-color-menu-item); /* A light grey background */
+    padding: 10px; /* Space between the border and the text */
+    margin: 2px auto; /* Space around the box, 'auto' centers it horizontally */
+    width: 90%; /* Adjust the width as needed, can be px or % */
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--text-color-primary);
+    font-weight: bold;
+    transition: color 0.3s ease;
+    
+}
+
+.menu img {
+    width: 100%;
+    height: 100%;
+}
+
+.menu a:hover {
+    color: var(--link-color-hover);
+    background-color: var(--bg-color-link-hover);
+}
+
+/* Footer CSS */
+
+footer {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    text-align: center;
+    border: 2px solid #ccc; /* This is the new continuous border */
+}
+
+.footer-top {
+    background-color: rgba(244, 252, 1, 0.778);
+    display: flex;
+    width: 100%;
+    margin: 0;
+    text-decoration: none;
+    color: var(--text-color-primary);
+    font-weight: ;
+    transition: color 0.3s ease;
+}
+
+.footer-middle {
+    width: 100%;
+    background-color: #ed5b5b;
+    padding: 0rem;
+    border-top: 2px solid #ccc;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.footer-middle a {
+    text-decoration: none;
+    color: var(--text-color-primary);
+}
+
+.footer-box {
+    width: 100%;
+    padding: .3rem;
+    text-align: center;
+    flex: 1;
+    margin: 0;
+    border-right: 2px solid #ccc;
+}
+
+.footer-box-imdb {
+    width: 100%;
+    padding: .3rem;
+    text-align: center;
+    flex: 1;
+    margin: 0;
+    border-right: 2px solid #ccc;
+}
+
+.footer-box:last-child {
+    border-right: 0; /* No border on the last box in the row */
+}
+
+.footer-bottom {
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+    margin: 0;
+    border-top: 2px solid #ccc;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-top a {
+    text-decoration: none;
+    color: var(--text-color-primary);
+}
+
+.footer-top a:hover {
+    color: var(--link-color-hover);
+    background-color: var(--bg-color-link-hover);
+}
+
+/* Main content can stay the same for now */
+main {
+    flex-grow: 1;
+    padding: 2rem;
+    text-align: center;
+}
+
+.bio-card {
+    border: 2px solid #ccc;
+    margin: 2px auto;
+    width: 100%;
+    max-width: 800px;
+}
+
+.card-title {
+    background-color: #f0f0f0;
+    padding: ;
+    border-bottom: 2px solid #ccc;
+    margin: ;
+    text-align: center;
+    font-weight: bold;
+}
+
+.bio-text {
+    padding: 1.5rem;
+    text-align: center;
+    line-height: 1.5;
+}
+
+
+form {
+    max-width: 500px;
+    margin:auto;
+  }
+  
+  fieldset {
+    padding: 20px;
+  }
+  
+  input,
+  textarea,
+  button {
+    width: 100%;
+  }
+
+/* This is the CSS Styling for the Gallery Section */
+
+/* Gallery Container: Default to a single column */
+.gallery-container {
+    display: grid;
+    grid-template-columns: 1fr; /* One column for mobile */
+    gap: 10px; /* Spacing between images */
+    max-width: 85%; /* Ensures the gallery takes up the full width */
+    margin: auto;
+    /* Removed the border from the container to avoid a double border */
+}
+
+/* Individual Gallery Item and Image Styling */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    border: 4px solid black; /* This border is now the only one */
+    /* Removed the redundant padding */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto; /* Maintains the image's aspect ratio */
+    object-fit: cover;
+    display: block;
+}
+
+/* The single, unified overlay for text */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.098); /* Semi-transparent black background */
+    display: flex; /* Centers the text vertically and horizontally */
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    opacity: 0; /* The overlay is invisible by default */
+    transition: opacity 0.3s ease; /* Adds a smooth fade-in effect */
+}
+
+/* Text inside the overlay */
+.overlay-text {
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    transform: translateY(100%); /* Starts off-screen */
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.gallery-item:hover .overlay {
+    opacity: 1; /* Makes the overlay visible on hover */
+}
+
+/* Text animation on hover */
+.gallery-item:hover .overlay-text {
+    transform: translateY(0); /* Moves the text into position */
+}
+
+/* this is the CSS Styling For the Portfolio Page */
+
+.portfolio-bins-container {
+    display: grid;
+    grid-template-columns: 1fr; /* One column for mobile */
+    gap: 1rem;
+    max-width: 100%;
+    margin: 0 auto; /* This centers the container on the page */
+}
+
+/* Individual Portfolio Bin and Image Styling */
+.portfolio-bin {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    border: 2px solid #e5e7eb;
+    aspect-ratio: 16/9;
+    margin: 0rem 1rem -.8rem 1rem;
+}
+
+.portfolio-bin img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* The single, unified overlay for text */
+.bin-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Pushes the text to the bottom */
+    align-items: center;
+}
+
+/* Text inside the overlay */
+.bin-text {
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+
+}
+
+/* Hover effect */
+.portfolio-bin:hover .bin-overlay {
+    opacity: 1;
+}
+
+/* Text animation on hover */
+.portfolio-bin:hover .bin-text {
+    transform: translateY(0);
+}
+
+/* This is the CSS Styling for the Film Portfolio */
+        /* --- New Film Section Styling --- */
+        .film-section {
+            margin-top: 0rem;
+        }
+
+        .film-section h2 {
+            margin: 1rem 0rem 1rem 0rem;
+            font-size: 2rem;
+            color: #333;
+            border-color: var(--color-cod-gray);
+            border-width: 2px;
+            background-color: var(--c-background-button-netscape);
+            position: sticky;
+            top: 0;
+            padding: .1rem .2rem .1rem .1rem;
+            z-index: 100;
+            width: ;
+        }
+        /* Carousel Container */
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 1 auto;
+            padding: 2rem 2rem .5rem 3.25rem;
+            flex: 1;
+            margin: 0 auto;
+        }
+
+        .carousel-track {
+            display: inline-flex;
+            transition: transform 0.5s ease-in-out;
+            gap: 0rem;
+        }
+        
+        .carousel-track.dragging {
+            cursor: grabbing;
+            transition: none;
+        }
+
+        .carousel-item {
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column; /* Adjusted: Use column layout */
+            align-items: center;
+            padding: 0rem;
+            white-space: normal; /* Allow text to wrap inside item */
+        }
+        
+        .carousel-item img {
+            max-height: 400px; /* New: Set a max height for vertical images */
+            width: auto;
+            height: auto;
+            display: block;
+
+            margin-bottom: 0.5rem;
+            border: 2px solid #000000;
+            object-fit: contain; 
+            
+        }
+        
+        .carousel-item p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        
+        .carousel-buttons {
+            display:flex;
+            justify-content: center;
+            margin: 0 auto;
+            margin-top: 0rem;
+            gap:rem;
+            width: 70%;
+        }
+
+        .carousel-nav {
+            align-items: center;
+            justify-content: center;
+            background: var(--c-background-button-netscape);
+            border-color: var(--color-gallery) var(--color-cod-gray) var(--color-cod-gray) var(--color-gallery);
+            border-radius: 0;
+            border-width: 2px;
+            cursor: pointer;
+            display: flex;
+            font-family: "Times New Roman";
+            font-weight: 700;
+            min-height: 0px;
+            min-width: 0px;
+            padding: 2px 4px 2px 2px;
+            position: relative;
+            white-space: nowrap;
+          
+          /* Zoom */
+            :hover,
+            :focus {
+                outline: 1px dotted var(--c-link);
+            }
+        
+            &:active {
+                border-color: var(--color-cod-gray) transparent transparent var(--color-cod-gray);
+            padding: 4px 2px 0px 4px;
+            }
+        
+
+        }
+
+        .project-details {
+            width: 80%;
+            margin: 0 auto;
+            margin-top: .5rem;
+            text-align: center;
+            line-height: 1.5;
+            background-color: white;
+            border: 2px solid;
+            border-color: #ccc;
+        }
+
+        .project-title {
+            background-color: var(--border-color-bio);
+            font-weight: bold;
+        }
+
+        .project-credit {
+            margin: .1rem 0rem .1rem 0rem;
+
+        }
+
+        .project-role {
+            font-style: italic;
+        }
+/*
+  Media Queries for larger screens (e.g., Tablets and Desktops)
+  The styles inside these blocks will only apply when the screen is wide enough.
+*/
+
+/* Styles for screens wider than 768px (common for tablets) */
+@media screen and (min-width: 768px) {
+    header {
+        flex-direction: row; /* Changes to a horizontal layout */
+        justify-content: space-between;
+    }
+
+    .logo img {
+        margin-bottom: 0; /* Removes bottom margin */
+    }
+
+    .menu ul {
+        flex-direction: row; /* Changes menu items back to horizontal */
+    }
+
+    .menu li {
+        margin: 0 10px; /* Adjusts margin for horizontal spacing */
+    }
+}
