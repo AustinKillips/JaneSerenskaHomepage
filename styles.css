@@ -1,5 +1,5 @@
 :root {
-    --bg-color-main: rgba(36, 136, 136, 0.817);
+    --bg-color-main: rgba(73, 124, 126, 1);
     --text-color-primary: #140000;
     --border-color-1: #ccc;
     --bg-color-menu-item: #ed5b5b;
@@ -249,12 +249,52 @@ main {
     text-align: center;
 }
 
+.business-card{
+    display: none;
+}
+
 .bio-card {
-    background: #fff200;
-    border: 2px solid #ccc;
+    border-style: solid;
+    border-top-color: #555;
+    border-left-color: #555;
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+    background: rgb(241, 245, 13);
+    outline: 2px solid #c0c0c0;
+    margin: 2px auto;
+    width: 100%;
+    max-width: 450px;
+    padding: 0rem 0rem 0.5rem 0rem;
+    position: relative; /* This is crucial for positioning the images absolutely */
+}
+
+
+.bio-card img {
+    width: 12vw;
+    height:10vw;
+    margin: .5rem .5rem 0rem .5rem;
+    object-fit: contain;
+}
+
+.bio-card-2 {
+    border-style: solid;
+    border-top-color: #555;
+    border-left-color: #555;
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+    outline: 2px solid #c0c0c0;
     margin: 2px auto;
     width: 100%;
     max-width: 400px;
+    margin: 1rem 0rem 1rem 0rem;
+}
+
+.bio-card-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 1rem 2rem 0rem 1rem;
+    
 }
 
 .card-title {
@@ -266,10 +306,48 @@ main {
     font-weight: bold;
 }
 
+.bio-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    position: relative; /* Needed for z-index and stacking */
+}
+
 .bio-text {
-    padding: .75rem;
-    text-align: center;
+    padding: 0rem 2rem 0rem 2rem; /* Adjust padding to separate text from images */
+    text-align: center ; /* Justifies the text */
     line-height: 1.5;
+    z-index: 1; /* Ensures the text stays above the images if they overlap */
+}
+
+.corner-image {
+    position: absolute;
+    width: 18vw; /* Adjust to suit your design */
+    height: 10vw; /* Adjust to suit your design */
+    object-fit: contain;
+    z-index: 0; /* Ensures images are behind the text */
+}
+
+.top-left {
+    top: 0;
+    left: 0;
+}
+
+.top-right {
+    top: 0;
+    right: 0;
+}
+
+.bottom-left {
+    bottom: 0;
+    left: 0;
+}
+
+.bottom-right {
+    bottom: 0;
+    right: 0;
 }
 
 
@@ -292,19 +370,17 @@ form {
 
 .gallery-section {
     margin: 1rem 1rem 0rem 1rem;
-    background-color: rgb(63, 39, 3);
-    border: 6px solid #ccc;
+    
 }
 .gallery-section h2 {
     font-size: 2rem;
-    border-bottom: 6px solid #ccc;
-    background-color: rgb(59, 74, 146);
     position: sticky;
     top: 0;
     padding: .5rem .2rem .5rem 1rem;
     margin: 0rem 0rem 0rem 0rem;
     z-index: 100;
     width: auto;
+
     }
 
 /* Gallery Container: Default to a single column */
@@ -314,9 +390,15 @@ form {
     gap: 10px; /* Spacing between images */
     max-width: 85%; /* Ensures the gallery takes up the full width */
     margin: auto;
-    background-color: #ccc;
+    background-color: #cccccca2;
     border: 4px solid #000000;
     padding: .5rem .5rem .5rem .5rem;
+    border-style: solid;
+    border-top-color: #555;
+    border-left-color: #555;
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+    outline: 2px solid #c0c0c0;
 }
 
 /* Individual Gallery Item and Image Styling */
@@ -401,12 +483,17 @@ form {
 /* this is the CSS Styling For the Portfolio Page */
 
 .work-sample-card {
-    background: #26d394;
-    border: 2px solid #ccc;
+    background: rgb(114, 247, 251);
     margin: 2px auto;
     width: 100%;
     max-width: 95vw;
     margin: 1rem 0rem 0rem 0rem;
+    border-style: solid;
+    border-top-color: #555;
+    border-left-color: #555;
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+    outline: 2px solid #c0c0c0;
 }
 
 .portfolio-bins-container {
@@ -513,6 +600,12 @@ form {
             background-color: rgb(242, 230, 121);
             border: 6px solid #ccc;
             z-index: 10;
+            border-style: solid;
+            border-top-color: #555;
+            border-left-color: #555;
+            border-right-color: #fff;
+            border-bottom-color: #fff;
+            outline: 2px solid #c0c0c0;
         }
 
         .film-section h2 {
@@ -524,7 +617,7 @@ form {
             padding: .5rem .2rem .5rem 1rem;
             margin: 0rem 0rem 0rem 0rem;
             z-index: 1;
-            width: vw;
+
         }
 
         .print-section {
@@ -568,7 +661,6 @@ form {
         .carousel-wrapper {
             margin-top: 1rem;
             padding-top: 1.5rem;
-            border-top: 6px solid #ccc;
 
         }
 
@@ -817,7 +909,6 @@ form {
         max-width: 1200px; /* Constrains the max width of the body for very large screens */
         margin: 2rem auto;
         ; /* Centers the content on the page */
-        border: 7px solid rgb(0, 0, 0);
     }
 
     /* Header */
@@ -855,17 +946,67 @@ form {
     /* Main Content and Bio */
     main {
         max-width: 1200px;
-        margin: 0 ; /* Centers main content */
+        margin: 0 auto; /* Centers the main content */
+        display: flex; /* Enables flexbox for the main container */
+        flex-direction: column; /* Stacks the top row and bottom box vertically */
+        align-items: center; /* Centers everything horizontally within the main container */
+    }
+    
+    .business-card{
+        display: block;
+        width: 40vw;
+        height:14vw;
+        object-fit: contain;
+        margin: 0rem 0rem 0rem 0rem;
+        filter: grayscale(70%);
     }
 
+    .top-row {
+        display: flex; /* Makes the top row a flex container */
+        justify-content: center; /* Centers the two bio cards */
+        gap: 0rem; /* Adds space between the two bio cards */
+        width: 100%; /* Ensures the top row container spans the full width */
+        margin-bottom: 0rem; /* Adds space between the top and bottom sections */
+        margin-top: 0rem;
+    }
+    
     .bio-card {
-        width: 40vw; /* Sets a specific width for the bio card */
-        margin: 0rem auto 0rem auto;
+        width: 45%; /* Each card takes up almost half the space */
+        padding: 0rem;
+        margin: 4rem 2rem 0rem 3.5rem;
+        align-self: flex-start;
+    }
+
+    .bio-card-2 {
+        margin: 1rem 0rem -1.5rem 6.3rem;
+    }
+
+    .bio-card img {
+        width: 4vw;
+        height:3vw;
+        object-fit: contain;
+        margin: 0rem 0rem 0rem 0rem;
+    }
+
+    .bio-card-2 img {
+        padding: 0rem 0rem rem 0rem;  
+    }
+    
+    .bio-content {
+        margin: .5rem 1rem .5rem 1rem;
+    }
+    
+    .bio-text {
+       margin: 0rem 1rem 0rem 1rem;
+    }
+    
+    .corner-image {
+
     }
 
     .work-sample-card {
-        width: 40vw; /* Sets a specific width for the bio card */
-        margin: 1rem auto 0rem auto;
+        width: 90%; /* Let the work sample card be wider to fill the space */
+        padding: 0rem;
     }
 
     /* Footer */
@@ -884,6 +1025,12 @@ form {
         margin: 0rem -2rem 0rem -2rem;
         padding: .5rem 0rem 0rem 0rem;
         border: 6px solid #ccc;
+        border-style: solid;
+        border-top-color: #555;
+        border-left-color: #555;
+        border-right-color: #fff;
+        border-bottom-color: #fff;
+        outline: 2px solid #c0c0c0;
     }
 
     .film-section h2, .print-section h2, .SFX-section h2{
@@ -958,17 +1105,15 @@ form {
 
     /* Gallery */
     .gallery-section {
-        margin: 0rem 0rem 0rem 0rem;
-        padding: .25rem 0rem 0rem 0rem;
-        border: 6px solid #ccc;
+
     }
+
     .gallery-section h2 {
         font-size: 2rem;
         border-bottom: 6px solid #ccc;
-        background-color: rgb(51, 59, 99);
+        background-color: #9515152e;
         position: sticky;
         top: 0;
-        padding: .5rem .2rem .5rem 1rem;
         margin: 0rem 0rem 0rem 0rem;
         z-index: 100;
         width: auto;
@@ -977,9 +1122,8 @@ form {
     .gallery-container {
         grid-template-columns: repeat(2, 1fr); /* Creates a 3-column grid */
         max-width: 1100px; /* Increases max width */
-        background-color: #5f5c59;
-        border: 4px solid #ccc;
         padding: 2rem 2rem 2rem 2rem;
+        background-color: ;
     }
     
     .gallery-item {
@@ -1006,7 +1150,6 @@ form {
         max-width: 1600px; /* Constrains the max width of the body for very large screens */
         margin: 10rem auto;
         ; /* Centers the content on the page */
-        border: 7px solid rgb(0, 0, 0);
     }
 
     main {
@@ -1023,8 +1166,6 @@ form {
     }
 
     .work-sample-card {
-        background: #26d394;
-        border: 2px solid #ccc;
         margin: 2px auto;
         width: 100%;
         max-width: 100vw;
