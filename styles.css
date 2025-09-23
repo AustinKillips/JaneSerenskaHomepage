@@ -38,6 +38,7 @@ header {
     align-items: center;
     border-bottom: 1px;
     width: 100%;
+    margin-bottom: .5rem;
 }
 
 .logo img {
@@ -82,6 +83,7 @@ header {
     }
 
     .menu a:active {
+        color: var(--link-color-hover);
         border-top-color: #555;
         border-left-color: #555;
         border-right-color: #fff;
@@ -96,8 +98,9 @@ header {
     height: 100%;
 }
 
-.menu a:hover {
-    color: var(--link-color-hover);
+.menu a:hover,
+.menu a.current {
+    color:;
     background-color: var(--bg-color-link-hover);
 }
 
@@ -110,8 +113,8 @@ footer {
     align-items: center;
     width: 100%;
     margin: 0 auto;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     text-align: center;
     border: 2px solid #ccc; /* This is the new continuous border */
 }
@@ -352,9 +355,85 @@ main {
 
 
 form {
+    padding-top: .5rem;
     max-width: 500px;
     margin:auto;
+    background-color:#e6e6e6 ;
+    border-style: solid;
+    border-top-color: #555;
+    border-left-color: #555;
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+    background: #e6e6e6;
+    outline: 2px solid #c0c0c0;
   }
+
+legend {
+    font-size: var(--fluid-font-size);
+    font-weight: bold;
+    color: #000000;
+    padding: 0 0.5rem;    
+}
+
+/* Spacing for each form field block */
+div {
+    margin-bottom: 0rem;
+}
+
+/* Label styling */
+label {
+
+}
+
+/* Input field styling (text, email, textarea) */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.1rem;
+    border: 1px solid #555;
+    font-size: 1rem;
+    box-sizing: border-box; /* Makes padding part of the element's width */
+    transition: border-color 0.3s ease;
+}
+
+/* Focus state for a visual highlight */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Textarea specific styling */
+textarea {
+    border-style: solid;
+    border-color: #555;
+}
+
+/* Button styling */
+button {
+    text-decoration: none;
+    color: var(--text-color-primary);
+    font-weight: bold;
+    display: block; /* Make the link a block element to fill the box */
+    padding: .3rem;
+    
+    /* Raised 3D effect */
+    border-style: solid;
+    border-width: 2px; /* Adjust border width as needed */
+    border-top-color: #fff;
+    border-left-color: #fff;
+    border-right-color: #555;
+    border-bottom-color: #555;
+    transition: all 0.1s ease-in-out;
+}
+
+/* Hover effect for the button */
+button:hover {
+        color: var(--link-color-hover);
+    background-color: var(--bg-color-link-hover);
+}
   
   fieldset {
     padding: 20px;
@@ -364,12 +443,13 @@ form {
   textarea,
   button {
     width: 100%;
+    
   }
 
 /* This is the CSS Styling for the Gallery Section */
 
 .gallery-section {
-    margin: 1rem 1rem 0rem 1rem;
+    margin: 0rem 0rem 0rem 0rem;
     
 }
 .gallery-section h2 {
@@ -386,9 +466,9 @@ form {
 /* Gallery Container: Default to a single column */
 .gallery-container {
     display: grid;
-    grid-template-columns: 1fr; /* One column for mobile */
+    grid-template-columns: 1fr 1fr; /* One column for mobile */
     gap: 10px; /* Spacing between images */
-    max-width: 85%; /* Ensures the gallery takes up the full width */
+    max-width: 100%; /* Ensures the gallery takes up the full width */
     margin: auto;
     background-color: #cccccca2;
     border: 4px solid #000000;
@@ -406,7 +486,7 @@ form {
     position: relative;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    border: 4px solid black; /* This border is now the only one */
+    border: 2px solid black; /* This border is now the only one */
 }
 
 .gallery-item img {
@@ -448,13 +528,13 @@ form {
     color: #000080;
     text-align: center;
     padding: 0.5rem;
-    font-size: 1.2rem;
+    font-size: var(--fluid-font-size);
     text-shadow: 1px 1px 0 #fff;
     margin-bottom: 5px;
 }
 
 .overlay-text h2 {
-    font-size: 1.8rem; /* Larger heading */
+    font-size: var(--fluid-font-size); /* Larger heading */
     margin-bottom: 10px;
     text-shadow: 2px 2px 0 #000; /* Stronger shadow for heading */
 }
@@ -483,7 +563,7 @@ form {
 /* this is the CSS Styling For the Portfolio Page */
 
 .work-sample-card {
-    background: rgb(114, 247, 251);
+    background: #1cace4;
     margin: 2px auto;
     width: 100%;
     max-width: 95vw;
@@ -592,7 +672,16 @@ form {
 
 /* This is the CSS Styling for the Portfolio sections */
         .title {
-            
+    background: ;
+    border-style: solid;
+    border-top-color: #555;
+    border-left-color: #555;
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+    text-align: center;
+    width:fit-content;
+    padding: .5rem;
+    display: flex-end;
         }
 
         .film-section {
@@ -608,27 +697,67 @@ form {
             outline: 2px solid #c0c0c0;
         }
 
-        .film-section h2 {
-            font-size: 2rem;
-            border-bottom: 6px solid #ccc;
-            background-color: rgb(242, 230, 121);
-            position: sticky;
-            top: 0;
-            padding: .5rem .2rem .5rem 1rem;
-            margin: 0rem 0rem 0rem 0rem;
-            z-index: 1;
+.film-section .sentinel {
+  height: 1px;
+  background: transparent;
+}
 
-        }
+      .film-section h2 {
+    font-size: 2rem;
+    background-color: rgb(242, 230, 121);
+    position: sticky;
+    top: 0;
+    padding: 0rem .2rem 0rem 0rem;
+    margin: .25rem 1rem 0rem 1rem;
+    z-index: 1;
+    letter-spacing: rem;
+    text-align: center;
+    display: flex-center; /* This will help with letter spacing and alignment */
+    background: #888;
+    border-style: solid;
+    background: #e6e6e6;
+    opacity: 1;
+      }
 
-        .print-section {
-            margin: 1rem 0rem 0rem 0rem;
-            background-color: rgb(6, 254, 101);
-            border: 6px solid #ccc;
+.film-section h2.visible {
+  opacity: .7; /* Becomes fully opaque */
+}
+
+      .film-section h2 span {
+    display: inline-block;
+    padding: 0 5px; /* Adjust spacing as needed */
+}
+
+.film-letter-F {
+    transform: rotate(-10deg);
+}
+
+.film-letter-I {
+    transform: rotate(-8deg);
+}
+
+.film-letter-L {
+    transform: rotate(2deg);
+}
+
+.film-letter-M {
+    transform: rotate(-8deg);
+}
+
+.print-section {
+    margin: 1rem 0rem 0rem 0rem;
+    background-color: rgb(6, 254, 101);
+    border: 6px solid #ccc;
+    z-index: 10;
+    border-style: solid;
+    border-top-color: #555;
+    border-left-color: #555;
+    border-right-color: #fff;        border-bottom-color: #fff;
+    outline: 2px solid #c0c0c0;
         }
 
         .print-section h2 {
             font-size: 2rem;
-            border-bottom: 6px solid #ccc;
             background-color: rgb(6, 254, 101);
             position: sticky;
             top: 0;
@@ -659,7 +788,7 @@ form {
         
         /* Carousel Container */
         .carousel-wrapper {
-            margin-top: 1rem;
+            margin-top: 0rem;
             padding-top: 1.5rem;
 
         }
@@ -668,7 +797,7 @@ form {
             position: relative;
             overflow-x: auto;
             max-width: 800px;
-            margin: 0rem 1.5rem .25rem 1.5rem;
+            margin: 0rem 1rem .25rem 1.1rem;
             flex: 10;
             background: #888;
             border-style: solid;
@@ -813,7 +942,7 @@ form {
             margin: 0 auto;
             margin-top: 0rem;
             gap:0rem;
-            width: 90%;
+            width: 91%;
             
         }
 
@@ -899,6 +1028,21 @@ form {
     .menu li {
         margin: 0 10px; /* Adjusts margin for horizontal spacing */
     }
+
+    .corner-imagetop-left,
+    .corner-image top-right,
+    .corner-image bottom-left,
+    .corner-image bottom-right {
+    position: absolute;
+    width: 1vw; /* Adjust to suit your design */
+    height: 1vw; /* Adjust to suit your design */
+    object-fit: contain;
+    z-index: 0; /* Ensures images are behind the text */
+    }
+
+    .bio-text {
+        margin: 2rem;
+    }
 }
 
 /* Media query for screens wider than 1200px (desktops) */
@@ -969,6 +1113,14 @@ form {
         margin-bottom: 0rem; /* Adds space between the top and bottom sections */
         margin-top: 0rem;
     }
+
+    .corner-image {
+    position: absolute;
+    width: 1vw; /* Adjust to suit your design */
+    height: 11vw; /* Adjust to suit your design */
+    object-fit: contain;
+    z-index: 0; /* Ensures images are behind the text */
+}
     
     .bio-card {
         width: 45%; /* Each card takes up almost half the space */

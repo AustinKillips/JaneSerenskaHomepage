@@ -25,8 +25,15 @@
     <div class="title">
         <h1>Portfolio of Work</h1>
     </div>
+
     <section class="film-section" id="film">
-        <h2>FILM</h2>
+        <div class="sentinel"></div>
+    <h2>
+         <span class="film-letter-F">F</span>
+        <span class="film-letter-I">I</span>
+        <span class="film-letter-L">L</span>
+        <span class="film-letter-M">M</span>
+    </h2>
         
         <div class="carousel-wrapper">
             <div class="carousel-container" id="grim-all-day-carousel">
@@ -359,10 +366,10 @@
         </div>
         <div class="footer-middle">
             <div class="footer-box footer-ig-box">
-                <a href="#">Instagram</a>
+                <a href="https://www.instagram.com/sweetbbjane/?hl=en">Instagram</a>
             </div>
                 <div class="footer-box-imdb">
-                    <a href="#">IMDB</a>
+                    <a href="https://www.imdb.com/name/nm12645938/">IMDB</a>
                 </div>
           <div class="footer-box footer-contact-box">
                 <a href="#">Contact</a>
@@ -454,17 +461,66 @@
                             });
                         });
                     </script>
-                </body>
-                </html>
-                
-            </body>
-            </html>
-            
-        </body>
-        </html>
-        
-    </body>
-    </html>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const currentPath = window.location.pathname;
+        const menuLinks = document.querySelectorAll('.menu a');
+
+        menuLinks.forEach(link => {
+            const linkPath = link.pathname;
+            if (currentPath.startsWith(linkPath) && linkPath !== '/') {
+                link.classList.add('current');
+            } else if (currentPath === '/' && linkPath === '/') {
+                link.classList.add('current');
+            }
+        });
+    });
+</script>
       
+<script>
+    $("#fake").click(function() {
+  $("html").toggleClass("csstransforms");
+});
+
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Select the sticky header and the new sentinel element
+  const filmHeader = document.querySelector('.film-section h2');
+  const sentinel = document.querySelector('.film-section .sentinel');
+
+  // If the elements don't exist, stop the script
+  if (!filmHeader || !sentinel) {
+    console.error('Required elements not found.');
+    return;
+  }
+
+  // Set observer options: trigger when the sentinel element is no longer visible
+  const observerOptions = {
+    root: null, // use the viewport
+    threshold: 0 // trigger when the sentinel is fully out of view
+  };
+
+  // Define the callback function that will run when the visibility changes
+  const observerCallback = (entries) => {
+    entries.forEach(entry => {
+      // The header becomes sticky when the sentinel is no longer intersecting
+      if (!entry.isIntersecting) {
+        filmHeader.classList.add('visible');
+      } else {
+        // When the sentinel is back in view, the header is no longer sticky
+        filmHeader.classList.remove('visible');
+      }
+    });
+  };
+
+  // Create the observer
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+  // Tell the observer to watch the sentinel element
+  observer.observe(sentinel);
+});
+</script>
 </body>
 </html>

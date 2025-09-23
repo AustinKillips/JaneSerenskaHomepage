@@ -24,6 +24,7 @@
     
     <section class="gallery-section" id="gallery">
 
+
     <div class="gallery-container">
         <div class="gallery-item">
             <img src="gallery image 1.jpg" alt="Image 1">
@@ -34,7 +35,7 @@
                 </div>
             </div>
         </div>
-        <div class="gallery-item">
+        <div  class="gallery-item">
             <img src="Gallery image 2.jpg" alt="Image 2">
             <div class="overlay">
                 <div class="overlay-text">
@@ -125,5 +126,20 @@
         </div>
     </footer>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const currentPath = window.location.pathname;
+        const menuLinks = document.querySelectorAll('.menu a');
+
+        menuLinks.forEach(link => {
+            const linkPath = link.pathname;
+            if (currentPath.startsWith(linkPath) && linkPath !== '/') {
+                link.classList.add('current');
+            } else if (currentPath === '/' && linkPath === '/') {
+                link.classList.add('current');
+            }
+        });
+    });
+</script>
 </body>
 </html>
