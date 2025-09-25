@@ -1847,7 +1847,6 @@ button:hover {
     .gallery-item {
         object-fit: fill;
         margin: .5rem;
-        border: 2px dotted rgb(0, 0, 0);
         }
 
     .gallery-item img {
