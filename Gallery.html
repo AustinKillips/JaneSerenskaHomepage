@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
     <link rel="stylesheet" href="styles.css">
     <title>Gallery - Jane Serenska</title>
 </head>
@@ -15,16 +16,38 @@
         </div>
         <nav class="menu">
             <ul>
-                <li style="background-color: rgb(255, 251, 0);"><a href="Gallery.html">Gallery</a></li>
                 <li style="border-right: 0px;"><a href="portfolio.html">Portfolio</a></li>
+                <li style="background-color: rgb(255, 251, 0);"><a href="Gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    
+
+    <div class="title">
+        <picture>
+            <!-- Large screens (1200px+) - use largest image -->
+            <source media="(min-width: 1200px)" srcset="photo gallery 600.gif">
+            
+            <!-- Medium screens (768px+) - use medium image -->
+            <source media="(min-width: 768px)" srcset="photo gallery 450.gif">
+            
+            <!-- Small screens (default fallback) - use smallest image -->
+            <img src="photo gallery 6002.gif" alt="Photo Gallery Title">
+        </picture>
+    </div>    
+      </div>
+      <div class="corner-triangle corner-triangle-top-left"></div>
+    <div class="corner-triangle corner-triangle-top-right"></div>
+    <div class="corner-triangle corner-triangle-bottom-left"></div>
+    <div class="corner-triangle corner-triangle-bottom-right"></div>
     <section class="gallery-section" id="gallery">
-
-
+        <div class="title-bar inactive">
+            <div class="title-bar-text" >hair - make-up - sfx  </div>
+            <div class="title-bar-controls">
+                <button aria-label="Maximize" disabled></button>
+              <button aria-label="" inactive> <3 </button>
+            </div>
+          </div>
     <div class="gallery-container">
         <div class="gallery-item">
             <img src="gallery image 1.jpg" alt="Image 1">
@@ -125,7 +148,6 @@
             <p>2025 Jane Serenska | All Rights Reserved.</p>
         </div>
     </footer>
-
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const currentPath = window.location.pathname;
@@ -140,6 +162,6 @@
             }
         });
     });
-</script>
+</script> 
 </body>
 </html>

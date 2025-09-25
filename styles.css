@@ -11,6 +11,20 @@
 	--color-cod-gray: #111;
     --c-background-button-netscape: silver;
     --fluid-font-size: clamp( .8rem, 1vw + .8rem, 1.25rem);
+    --font-family: 'Times New Roman', Times, serif;
+    
+}
+
+html {
+}
+
+@font-face { 
+    font-family: "Times New Roman" !important;
+    src: local("Times New Roman"),
+         url("/fonts/times-new-roman.woff2") format("woff2"),
+         url("/fonts/times-new-roman.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
 
 * {
@@ -20,15 +34,18 @@
 }
 
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif !important;
     color: var(--text-color-primary);
     background-color: var(--bg-color-main);
     font-size: var(--fluid-font-size);
-    margin: 0rem .25rem 0rem .25rem;
-    padding: 0rem 1rem 0rem 1rem;
+    margin: 0rem 0rem 0rem 0rem;
+    padding: 0rem .5rem 0rem .5rem;
 }
 
-
+.field-border-disabled {
+    background-color: #ffffff00;
+    box-shadow: none;
+}
 
 header {
     background-color:;
@@ -44,8 +61,7 @@ header {
 .logo img {
     max-width: 100%;
     height: auto;
-    width: auto;
-    margin-bottom:;
+     margin: auto;
 }
 
 .menu ul {
@@ -100,13 +116,29 @@ header {
 
 .menu a:hover,
 .menu a.current {
-    color:;
     background-color: var(--bg-color-link-hover);
+}
+
+.vertical-header-decoration {
+    /* Revised: Change width to % to fit the header container */
+    background-image: url("ocean.gif");
+    width: 89%; /* Now spans the full width of its parent */
+    height: 5px;
+    /* Move it below the header using a top margin */
+    margin: 0rem 0rem 0rem 1rem;
+}
+.vertical-header-decoration-2 {
+    rotate:calc(180deg);
+    background-image: url("ocean.gif");
+    width: 89%; /* Now spans the full width of its parent */
+    height: 5px;
+    margin: 0rem 0rem 0rem 1rem;
 }
 
 /* Footer CSS */
 
 footer {
+    font-size: small;
     color: black;
     display: flex;
     flex-direction: column;
@@ -288,8 +320,9 @@ main {
     outline: 2px solid #c0c0c0;
     margin: 2px auto;
     width: 100%;
-    max-width: 400px;
-    margin: 1rem 0rem 1rem 0rem;
+    max-width: 440px;
+    margin: 1rem 0rem 0rem 0rem;
+    min-height: 200px;
 }
 
 .bio-card-2 img {
@@ -297,7 +330,6 @@ main {
     height: 100%;
     object-fit: cover;
     padding: 1rem 2rem 0rem 1rem;
-    
 }
 
 .card-title {
@@ -319,6 +351,7 @@ main {
 }
 
 .bio-text {
+    font-size: var(--fluid-font-size);
     padding: 0rem 2rem 0rem 2rem; /* Adjust padding to separate text from images */
     text-align: center ; /* Justifies the text */
     line-height: 1.5;
@@ -354,10 +387,133 @@ main {
 }
 
 
+.contact-title {
+    margin-bottom: .5rem;
+    margin-top: -1.25rem;
+    text-align: center;
+    }
+
+    .contact-title picture img {
+        width: 65% !important;
+        max-height: 55px;
+        max-width: none !important;
+    }
+
+    .work-sample-card {
+        background: #1cace4;
+        margin: 2px auto;
+        width: 100%;
+        max-width: 95vw;
+        margin: 1rem 0rem 0rem 0rem;
+        border-style: solid;
+        border-top-color: #555;
+        border-left-color: #555;
+        border-right-color: #fff;
+        border-bottom-color: #fff;
+        outline: 2px solid #c0c0c0;
+    }
+    
+    .portfolio-bins-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Creates a 3-column grid */
+        gap: .2rem;
+        max-width: 100%;
+        padding: .75rem .5rem .75rem .5rem;
+        margin: 0rem 0rem 0rem 0rem;
+        align-items: center;
+    }
+    
+    /* Individual Portfolio Bin and Image Styling */
+    .portfolio-bin {
+        position: relative;
+        aspect-ratio: 16/9; /* Changed to a portrait aspect ratio */
+        margin: 0 0 0 0;
+    }
+    
+    .portfolio-bin img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        aspect-ratio: 16/9;
+        margin: 0;
+    }
+    
+    .portfolio-bin a {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        border-style: solid;
+        border-width: 4px 4px 4px 4px;
+        border-top-color: #f0f0f0;
+        border-left-color: #f0f0f0;
+        border-right-color: #888;
+        border-bottom-color: #888;
+        background-color: #ccc;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+        transition: transform 0.1s ease, box-shadow 0.1s ease;
+        padding: 2px 2px 2px 2px;
+    }
+    
+    .portfolio-bin a img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures the image covers the entire area without distortion */
+    }
+    
+    /* Hover effect */
+    .portfolio-bin a:hover {
+        background-color: #e0e0e0;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    }
+    
+    /* The "depressed" effect on click */
+    .portfolio-bin a:active {
+        border-top-color: #888;
+        border-left-color: #888;
+        border-right-color: #f0f0f0;
+        border-bottom-color: #f0f0f0;
+        transform: translate(2px, 2px);
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* The single, unified overlay for text */
+    .bin-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Pushes the text to the bottom */
+        align-items: center;
+    }
+    
+    /* Text inside the overlay */
+    .bin-text {
+        font-size: var(--fluid-font-size);
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    /* Hover effect */
+    .portfolio-bin:hover .bin-overlay {
+        opacity: 1;
+    }
+    
+    /* Text animation on hover */
+    .portfolio-bin:hover .bin-text {
+        transform: translateY(0);
+    }
+
+    /* this is the css styling for the contact page */
+
 form {
     padding-top: .5rem;
     max-width: 500px;
-    margin:auto;
+    margin:1rem auto;
     background-color:#e6e6e6 ;
     border-style: solid;
     border-top-color: #555;
@@ -369,6 +525,7 @@ form {
   }
 
 legend {
+    font-family: var(--font-family);
     font-size: var(--fluid-font-size);
     font-weight: bold;
     color: #000000;
@@ -389,8 +546,9 @@ label {
 input[type="text"],
 input[type="email"],
 textarea {
+    font-family: var(--font-family);
     width: 100%;
-    padding: 0.1rem;
+    padding: 1rem;
     border: 1px solid #555;
     font-size: 1rem;
     box-sizing: border-box; /* Makes padding part of the element's width */
@@ -449,9 +607,20 @@ button:hover {
 /* This is the CSS Styling for the Gallery Section */
 
 .gallery-section {
-    margin: 0rem 0rem 0rem 0rem;
-    
+    margin: auto;
+    background-color: rgba(179, 105, 116, 0.931);
+    border: 4px solid #ccc;
+    z-index: 10;
+    border-style: solid;
+    border-left-color: #555;
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+    outline: 2px solid #c0c0c0;
+    padding: 0rem 0rem 0rem 0rem;
+    margin: auto 1rem auto 1rem;
+    z-index: -100;    
 }
+   
 .gallery-section h2 {
     font-size: 2rem;
     position: sticky;
@@ -470,28 +639,26 @@ button:hover {
     gap: 10px; /* Spacing between images */
     max-width: 100%; /* Ensures the gallery takes up the full width */
     margin: auto;
-    background-color: #cccccca2;
-    border: 4px solid #000000;
-    padding: .5rem .5rem .5rem .5rem;
-    border-style: solid;
-    border-top-color: #555;
-    border-left-color: #555;
-    border-right-color: #fff;
-    border-bottom-color: #fff;
-    outline: 2px solid #c0c0c0;
+    padding: .75rem 1rem .75rem 1rem;
+
 }
 
 /* Individual Gallery Item and Image Styling */
 .gallery-item {
     position: relative;
     overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    border: 2px solid black; /* This border is now the only one */
+    background: #c0c0c07b;
+    padding: 2px;
+    box-shadow: inset
+    -1px -1px #ffffff,
+     1px 1px #808080,
+     -2px -2px #dfdfdf,
+     2px 2px #0a0a0a;
 }
 
 .gallery-item img {
     width: 100%;
-    height: auto; /* Maintains the image's aspect ratio */
+    height: 100%; /* Maintains the image's aspect ratio */
     object-fit: cover;
     display: block;
 }
@@ -501,17 +668,12 @@ button:hover {
 
 .overlay {
     position: absolute;
-    top: 75%;
+    top: 65%;
     left: 25%;
-    bottom: 25%;
+    bottom: 5%;
     right: 25%;
     width: 50%;
     height: 15%; 
-    background-color: rgb(192, 192, 192);
-    border: 2px solid #fff;
-    box-shadow: 
-        -2px -2px 0 0 #808080,
-        2px 2px 0 0 #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center; /* Changed to 'center' */
@@ -525,11 +687,11 @@ button:hover {
 }
 
 .overlay-text {
-    color: #000080;
+    color: var(--text-color-primary);
     text-align: center;
     padding: 0.5rem;
     font-size: var(--fluid-font-size);
-    text-shadow: 1px 1px 0 #fff;
+    text-shadow: 1px 1px 0 #ccc;
     margin-bottom: 5px;
 }
 
@@ -560,141 +722,56 @@ button:hover {
     transform: translateY(0); /* Moves the text into position */
 }
 
-/* this is the CSS Styling For the Portfolio Page */
-
-.work-sample-card {
-    background: #1cace4;
-    margin: 2px auto;
-    width: 100%;
-    max-width: 95vw;
-    margin: 1rem 0rem 0rem 0rem;
-    border-style: solid;
-    border-top-color: #555;
-    border-left-color: #555;
-    border-right-color: #fff;
-    border-bottom-color: #fff;
-    outline: 2px solid #c0c0c0;
-}
-
-.portfolio-bins-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Creates a 3-column grid */
-    gap: .2rem;
-    max-width: 100%;
-    padding: .75rem .5rem .75rem .5rem;
-    margin: 0rem 0rem 0rem 0rem;
-    align-items: center;
-}
-
-/* Individual Portfolio Bin and Image Styling */
-.portfolio-bin {
-    position: relative;
-    aspect-ratio: 16/9; /* Changed to a portrait aspect ratio */
-    margin: 0 0 0 0;
-}
-
-.portfolio-bin img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    aspect-ratio: 16/9;
-    margin: 0;
-}
-
-.portfolio-bin a {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    border-style: solid;
-    border-width: 4px 4px 4px 4px;
-    border-top-color: #f0f0f0;
-    border-left-color: #f0f0f0;
-    border-right-color: #888;
-    border-bottom-color: #888;
-    background-color: #ccc;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-    transition: transform 0.1s ease, box-shadow 0.1s ease;
-    padding: 2px 2px 2px 2px;
-}
-
-.portfolio-bin a img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the image covers the entire area without distortion */
-}
-
-/* Hover effect */
-.portfolio-bin a:hover {
-    background-color: #e0e0e0;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-}
-
-/* The "depressed" effect on click */
-.portfolio-bin a:active {
-    border-top-color: #888;
-    border-left-color: #888;
-    border-right-color: #f0f0f0;
-    border-bottom-color: #f0f0f0;
-    transform: translate(2px, 2px);
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-/* The single, unified overlay for text */
-.bin-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Pushes the text to the bottom */
-    align-items: center;
-}
-
-/* Text inside the overlay */
-.bin-text {
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-}
-
-/* Hover effect */
-.portfolio-bin:hover .bin-overlay {
-    opacity: 1;
-}
-
-/* Text animation on hover */
-.portfolio-bin:hover .bin-text {
-    transform: translateY(0);
-}
-
 /* This is the CSS Styling for the Portfolio sections */
         .title {
-    background: ;
-    border-style: solid;
-    border-top-color: #555;
-    border-left-color: #555;
-    border-right-color: #fff;
-    border-bottom-color: #fff;
-    text-align: center;
-    width:fit-content;
-    padding: .5rem;
-    display: flex-end;
+        margin-bottom: .5rem;
+        margin-top: .25rem;
+        text-align: center;
         }
 
+        .title picture img {
+            width: 85% !important;
+            max-height: 65px;
+            max-width: none !important;
+        }
+          
+       .title-bar {
+        margin: 0rem 0rem 0rem 0rem;
+        z-index: 1000;
+        width: 100%;
+        position: sticky;
+        top: 0;
+       }
+
+       .contact-title {
+        text-align: center;
+       }
+
+
         .film-section {
-            margin: 1rem 0rem 0rem 0rem;
-            background-color: rgb(242, 230, 121);
-            border: 6px solid #ccc;
+            background-color: #ffe502;
+            margin: auto;
+            border: 4px solid #ccc;
             z-index: 10;
             border-style: solid;
-            border-top-color: #555;
             border-left-color: #555;
             border-right-color: #fff;
             border-bottom-color: #fff;
             outline: 2px solid #c0c0c0;
+            z-index: -100;
+            margin: auto 1rem auto 1rem;
+        }
+
+        .film-section.minimized .film-content,
+        .print-section.minimized .print-content,
+        .SFX-section.minimized .sfx-content {
+            display: none;
+        }
+        
+        .film-section.maximized,
+        .print-section.maximized, 
+        .SFX-section.maximized {
+            /* You can add special maximized styles here if needed */
         }
 
 .film-section .sentinel {
@@ -703,23 +780,20 @@ button:hover {
 }
 
       .film-section h2 {
-    font-size: 2rem;
-    background-color: rgb(242, 230, 121);
-    position: sticky;
-    top: 0;
-    padding: 0rem .2rem 0rem 0rem;
-    margin: .25rem 1rem 0rem 1rem;
+    font-size: 3rem;
+    padding: 0rem 0rem 0rem 0rem;
+    margin: 0rem 0rem 0rem 0rem;
     z-index: 1;
-    letter-spacing: rem;
     text-align: center;
     display: flex-center; /* This will help with letter spacing and alignment */
-    background: #888;
-    border-style: solid;
-    background: #e6e6e6;
     opacity: 1;
+    background-color: rgba(230, 237, 237, 0.557);
+    border-bottom: solid 2px rgb(82,126,127);
       }
 
-.film-section h2.visible {
+.film-section h2.visible,
+.print-section h2.visible,
+.SFX-section h2.visible {
   opacity: .7; /* Becomes fully opaque */
 }
 
@@ -745,46 +819,100 @@ button:hover {
 }
 
 .print-section {
-    margin: 1rem 0rem 0rem 0rem;
+            margin: auto;
     background-color: rgb(6, 254, 101);
-    border: 6px solid #ccc;
-    z-index: 10;
-    border-style: solid;
-    border-top-color: #555;
-    border-left-color: #555;
-    border-right-color: #fff;        border-bottom-color: #fff;
-    outline: 2px solid #c0c0c0;
+            border: 4px solid #ccc;
+            z-index: 10;
+            border-style: solid;
+            border-left-color: #555;
+            border-right-color: #fff;
+            border-bottom-color: #fff;
+            outline: 2px solid #c0c0c0;
+            z-index: -100;
+            margin: auto 1rem auto 1rem;
         }
 
         .print-section h2 {
-            font-size: 2rem;
-            background-color: rgb(6, 254, 101);
-            position: sticky;
-            top: 0;
-            padding: .5rem .2rem .5rem 1rem;
-            margin: 0rem 0rem 0rem 0rem;
-            z-index: 100;
-            width: auto;
+            font-size: 3rem;
+            padding: 0rem .2rem 0rem 0rem;
+            margin: 0rem 0rem -.5rem 0rem;
+            z-index: 1;
+            text-align: center;
+            display: flex-center; /* This will help with letter spacing and alignment */
+            opacity: 1;
+            background-color: rgba(230, 237, 237, 0.557);
+            border-bottom: solid 2px rgb(82,126,127);
+        }
+
+        .print-section h2 span {
+            display: inline-block;
+            padding: 0 5px; /* Adjust spacing as needed */
+        }
+        
+        .print-letter-P {
+            transform: rotate(10deg);
+        }
+        
+        .print-letter-R {
+            transform: rotate(-8deg);
+        }
+        
+        .print-letter-I {
+            transform: rotate(4deg);
+        }
+        
+        .print-letter-N {
+            transform: rotate(-8deg);
+        }
+
+        .print-letter-T {
+            transform: rotate(-8deg);
         }
 
         .SFX-section {
-            margin: 1rem 0rem 0rem 0rem;
-            padding-bottom: .5rem;
+            margin: auto;
             background-color: rgb(255, 99, 42);
-            border: 6px solid #ccc;
+            border: 4px solid #ccc;
+            z-index: 10;
+            border-style: solid;
+            border-left-color: #555;
+            border-right-color: #fff;
+            border-bottom-color: #fff;
+            outline: 2px solid #c0c0c0;
+            z-index: -100;
+            margin: auto 1rem auto 1rem;
+
         }
 
         .SFX-section h2 {
-            font-size: 2rem;
-            border-bottom: 6px solid #ccc;
-            background-color: rgb(255, 99, 42);
-            position: sticky;
-            top: 0;
-            padding: .5rem .2rem .5rem 1rem;
-            margin: 0rem 0rem 0rem 0rem;
-            z-index: 100;
-            width: auto;
+            font-size: 3rem;
+            padding: 0rem .2rem 0rem 0rem;
+            margin: 0rem 0rem -.5rem 0rem;
+            z-index: 1;
+            text-align: center;
+            display: flex-center; /* This will help with letter spacing and alignment */
+            opacity: 1;
+            background-color: rgba(230, 237, 237, 0.557);
+            border-bottom: solid 2px rgb(82,126,127);
         }
+
+        .SFX-section h2 span {
+            display: inline-block;
+            padding: 0 5px; /* Adjust spacing as needed */
+        }
+        
+        .SFX-letter-S {
+            transform: rotate(-10deg);
+        }
+        
+        .SFX-letter-F {
+            transform: rotate(8deg);
+        }
+        
+        .SFX-letter-X {
+            transform: rotate(-6deg);
+        }
+
         
         /* Carousel Container */
         .carousel-wrapper {
@@ -796,8 +924,9 @@ button:hover {
         .carousel-container {
             position: relative;
             overflow-x: auto;
-            max-width: 800px;
-            margin: 0rem 1rem .25rem 1.1rem;
+            width: 77vw; /* Use the same max-width as the carousel */
+            margin: 0 auto; /* Corrects horizontal margin and centers the carousel */
+            padding: 1rem 1rem .25rem 1rem; /* Adjusts padding for consistent spacing */
             flex: 10;
             background: #888;
             border-style: solid;
@@ -807,7 +936,7 @@ button:hover {
             border-bottom-color: #fff;
             background: #e6e6e6;
             outline: 2px solid #c0c0c0;
-          }
+        }
           
           /* Added missing base scrollbar definitions required for buttons to appear */
           .carousel-container::-webkit-scrollbar {
@@ -939,27 +1068,26 @@ button:hover {
         .carousel-buttons {
             display:flex;
             justify-content: center;
-            margin: 0 auto;
-            margin-top: 0rem;
-            gap:0rem;
-            width: 91%;
-            
-        }
+            margin: auto auto;
+            gap: 0rem;
+            width: 77vw; /* Use the same max-width as the carousel */
+            margin: auto; /* New: Centers the buttons */        }
 
         .carousel-nav {
+            font-size: medium;
             align-items: center;
             justify-content: center;
             background: var(--c-background-button-netscape);
             border-color: var(--color-gallery) var(--color-cod-gray) var(--color-cod-gray) var(--color-gallery);
             border-radius: 0;
-            border-width: 2px;
+            border-width: 0px;
             cursor: pointer;
             display: flex;
             font-family: "Times New Roman";
             font-weight: 700;
             min-height: 0px;
             min-width: 0px;
-            padding: 2px 4px 2px 2px;
+            padding: 2px 0px 2px 0px;
             position: relative;
             white-space: nowrap;
           
@@ -978,9 +1106,8 @@ button:hover {
         }
 
         .project-details {
-            width: 90%;
-            margin: 0 auto;
-            margin: 0rem auto 2rem auto;
+            width: 77vw; /* Use the same max-width as the carousel */
+            margin: 0 auto 1rem; /* Corrects horizontal margin and centers the details */
             text-align: center;
             line-height: 1.5;
             background: #888;
@@ -996,6 +1123,7 @@ button:hover {
         .project-title {
             background-color: var(--border-color-bio);
             font-weight: bold;
+
         }
 
         .project-credit {
@@ -1004,6 +1132,7 @@ button:hover {
         }
 
         .project-role {
+            border-top: 2px dotted #000;
             font-style: italic;
         }
 /*
@@ -1013,12 +1142,112 @@ button:hover {
 
 /* Styles for screens wider than 768px (common for tablets) */
 @media screen and (min-width: 768px) {
-    header {
-        display: flex; /* Aligns header items horizontally */
+   
+    html {
+        background-color: rgba(85, 123, 125, 0.649);
+        z-index: 100000000;
     }
 
+    body {
+        max-width: 1000px; /* Constrains the max width of the body for very large screens */
+        margin: auto;
+        border: 2px dashed #c0c0c0;
+        position: relative;
+        min-height: fit-content;
+        min-width: 500px;
+        padding: 2rem;
+        min-height: 100vh;
+    }
+    .corner-triangle {
+        position: absolute;
+        width: var(--triangle-size); /* Now a square, not 0 width */
+        height: var(--triangle-size); /* Now a square, not 0 height */
+        z-index: 10;
+        --triangle-size: 50px; /* Keep the size variable */
+        
+        /* ADD THE STRIPED BACKGROUND */
+        background-image: repeating-linear-gradient(
+            135deg,           /* Angle of the stripes */
+            #525634,         /* First color (light pink) */
+            #e5caca 5px,     /* First color stops at 5px */
+            #d1b8b8 5px,     /* Second color (darker pink) starts at 5px */
+            #d1b8b8 10px     /* Second color stops at 10px (Total stripe width is 10px) */
+        );
+    }
+
+    .corner-triangle-top-left {
+        top: 0;
+        left: 0;
+        /* Use clip-path to cut the square into a top-left triangle */
+        clip-path: polygon(0 0, 100% 0, 0 100%);
+    }
+    .corner-triangle-top-right {
+        top: 0;
+        right: 0;
+        /* Use clip-path to cut the square into a top-right triangle */
+        clip-path: polygon(100% 0, 100% 100%, 0 0);
+    }
+    
+    /* --- Bottom-Left Triangle --- */
+    .corner-triangle-bottom-left {
+        bottom: 0;
+        left: 0;
+        /* Use clip-path to cut the square into a bottom-left triangle */
+        clip-path: polygon(0 100%, 100% 100%, 0 0);
+    }
+    
+    /* --- Bottom-Right Triangle --- */
+    .corner-triangle-bottom-right {
+        bottom: 0;
+        right: 0;
+        /* Use clip-path to cut the square into a bottom-right triangle */
+        clip-path: polygon(100% 100%, 0 100%, 100% 0);
+    }
+
+    header {
+        display: flex; /* Aligns header items horizontally */
+        margin: 0rem auto 2rem auto;
+        width: 75%;
+        align-items: center;
+        background-color: #51534f5b;
+        z-index: -1000;
+        border: 1px solid;
+        border-top: none;
+        box-shadow: inset
+        -1px -1px #ffffff,
+         1px 1px #808080,
+         -2px -2px #dfdfdf,
+         2px 2px #0a0a0a;
+    }
+
+    .field-border-disabled {
+        background: #c0c0c07b;
+        padding: 2px;
+        box-shadow: inset
+        -1px -1px #ffffff,
+         1px 1px #808080,
+         -2px -2px #dfdfdf,
+         2px 2px #0a0a0a;
+    }
+
+    .contact-field-border-disabled {
+        background: #c0c0c07b;
+        padding: 2px;
+        margin: auto 4rem auto 4rem;
+        box-shadow: inset
+        -1px -1px #ffffff,
+         1px 1px #808080,
+         -2px -2px #dfdfdf,
+         2px 2px #0a0a0a;
+    }
+    
     .logo img {
-        margin-bottom: 0; /* Removes bottom margin */
+        margin-bottom: -0; /* Removes bottom margin */
+        max-width: 500px; /* Increases logo size for desktop */
+        height: auto;
+        width: auto;
+        margin-bottom:;
+        z-index: 100;
     }
 
     .menu ul {
@@ -1026,70 +1255,400 @@ button:hover {
     }
 
     .menu li {
-        margin: 0 10px; /* Adjusts margin for horizontal spacing */
+        margin: -1.5rem .25rem 0rem 0rem ; /* Adjusts margin for horizontal spacing */
     }
 
-    .corner-imagetop-left,
-    .corner-image top-right,
-    .corner-image bottom-left,
-    .corner-image bottom-right {
-    position: absolute;
-    width: 1vw; /* Adjust to suit your design */
-    height: 1vw; /* Adjust to suit your design */
-    object-fit: contain;
-    z-index: 0; /* Ensures images are behind the text */
+    .menu a {
+        padding: .75rem 1.25rem .75rem 1.5rem;
+        z-index: -100;
+    }
+
+    .vertical-header-decoration {
+        /* Revised: Change width to % to fit the header container */
+        background-image: url("ocean.gif");
+        width: 100%; /* Now spans the full width of its parent */
+        height: 5px;
+        /* Move it below the header using a top margin */
+        margin: 0rem 0rem 1rem 0rem;
+    }
+    .vertical-header-decoration-2 {
+        rotate:calc(180deg);
+        background-image: url("ocean.gif");
+        width: 100%; /* Now spans the full width of its parent */
+        height: 5px;
+        margin: 1rem 0rem 0rem 0rem;
+    }
+
+    footer {
+        width: 80%;
+        font-size: medium;
+    }
+
+    .title picture img {
+        width: 60% !important;
+        max-height: 75px;
+        max-width: none !important;
+    }
+
+    img.corner-image {
+        position: absolute;
+        width: 6vw; /* Adjust to suit your design */
+        height: 6vw; /* Adjust to suit your design */
+        object-fit: contain;
+        z-index: 0; /* Ensures images are behind the text */
+    }
+
+    main {
+        max-width: 1200px;
+        margin: auto; /* Centers the main content */
+        display: flex; /* Enables flexbox for the main container */
+        flex-direction: column; /* Stacks the top row and bottom box vertically */
+        align-items: center; /* Centers everything horizontally within the main container */
+    }
+
+    .top-row {
+        display: flex; /* Makes the top row a flex container */
+        justify-content: ; /* Centers the two bio cards */
+        gap: 0rem; /* Adds space between the two bio cards */
+        margin-bottom: 0rem; /* Adds space between the top and bottom sections */
+        margin-top: 0rem;
+        align-items: center;
+        width: max-content;
+    }
+    
+    .business-card{
+        display: block;
+        width: 40vw;
+        height:14vw;
+        object-fit: contain;
+        margin: 0rem 0rem 0rem 0rem;
+        filter: grayscale(70%);
+    }
+
+    .bio-card {
+        width:40vw; /* Each card takes up almost half the space */
+        padding: 0rem;
+        margin: 1.2rem auto 0rem auto ;
+        align-self: flex-start;
     }
 
     .bio-text {
-        margin: 2rem;
+    padding: 0rem 2.5rem 0rem 2.5rem; /* Adjust padding to separate text from images */
+    text-align: center ; /* Justifies the text */
+    line-height: 1.25;
+    z-index: 1; /* Ensures the text stays above the images if they overlap */
     }
+
+    .bio-card-2 {
+        width: 45vw;
+        height: 10vw;
+        margin: 0rem 0rem 0rem 3rem;
+        scale: ;
+    }   
+
+/* This is the CSS Styling for the Gallery sections */
+
+.gallery-section {
+    width: 83vw;
+    max-width: 83vw;
+    padding: 0rem 0rem 0rem 0rem;
+    margin: auto;
+    border: 6px solid #ccc;
+    border-style: solid;
+    border-top-color: #555;
+    border-left-color: #555;
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+    outline: 2px solid #c0c0c0;
 }
+
+.gallery-section h2 {
+    font-size: 2rem;
+    border-bottom: 6px solid #ccc;
+    background-color: #9515152e;
+    position: sticky;
+    top: 0;
+    margin: 0rem 0rem 0rem 0rem;
+    z-index: 100;
+    width: auto;
+    }
+
+.gallery-container {
+    grid-template-columns: repeat(2, 1fr); /* Creates a 3-column grid */
+    max-width: 700px; /* Increases max width */
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+.gallery-item {
+    object-fit: fill;
+    margin: .5rem;
+    }
+
+.gallery-item img {
+    object-fit: fill;
+}
+
+/* Portfolio Bins */
+.portfolio-bins-container {
+    padding: 2rem 2rem 2rem 2rem;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr); /* Creates a 2-column grid */
+    gap: 1rem; /* Increases space between bins */
+}
+
+/* This is the CSS Styling for the Portfolio sections */
+
+.title-bar {
+    font-size: medium;
+    padding: .3rem;
+    margin: 0rem 0rem 0rem 0rem;
+    z-index: 1000;
+    width: 100.2%;
+    position: sticky;
+    top: 0;
+   }
+
+.film-section, .print-section, .SFX-section {
+    padding: 0rem 0rem 0rem 0rem;
+    border: 6px solid #ccc;
+    border-style: solid;
+    border-top-color: #555;
+    border-left-color: #555;
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+    outline: 2px solid #c0c0c0;
+    margin: auto;
+    max-width: 83vw;
+}
+    .film-section h2 {
+
+    }
+    .print-section {
+        margin: auto;
+        width: 83vw;
+    }
+   .print-section h2 {
+
+   }
+    .SFX-section {
+        margin: auto;
+        width: 83vw;
+    }
+
+   .SFX-section h2 {
+
+     }
+  
+     .carousel-container {
+        max-width: 550px; /* Expands the carousel container */
+        margin: 0 auto; /* Centers the carousel */
+        padding: 1rem 1rem .5rem 1rem;
+    }
+
+    .carousel-nav {
+        margin: auto;
+     }
+
+     .carousel-buttons {
+        width: 552px;
+        margin: auto;
+        }
+
+    .project-details {
+    max-width: 550PX;
+      }
+    }
 
 /* Media query for screens wider than 1200px (desktops) */
 @media screen and (min-width: 1200px) {
 
+    html {
+        background-color: rgba(85, 123, 125, 0.649);
+        z-index: 100000000;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    h4 {
+        font-size: ;
+    }
+
     /* Body and General Layout */
+    
     body {
-        max-width: 1200px; /* Constrains the max width of the body for very large screens */
-        margin: 2rem auto;
-        ; /* Centers the content on the page */
+        max-width: 1400px; 
+        margin: 0 auto;
+        border: 2px dashed #c0c0c0;
+        position: relative;
+        min-width: 1000px;
+        max-height: fit-content;
+        min-height: fit-content;
+    }
+
+    .corner-triangle {
+        position: absolute;
+        width: var(--triangle-size); /* Now a square, not 0 width */
+        height: var(--triangle-size); /* Now a square, not 0 height */
+        z-index: 10;
+        --triangle-size: 90px; /* Keep the size variable */
+        
+        /* ADD THE STRIPED BACKGROUND */
+        background-image: repeating-linear-gradient(
+            135deg,           /* Angle of the stripes */
+            #525634,         /* First color (light pink) */
+            #e5caca 5px,     /* First color stops at 5px */
+            #d1b8b8 5px,     /* Second color (darker pink) starts at 5px */
+            #d1b8b8 10px     /* Second color stops at 10px (Total stripe width is 10px) */
+        );
+    }
+
+    .corner-triangle-top-left {
+        top: 0;
+        left: 0;
+        /* Use clip-path to cut the square into a top-left triangle */
+        clip-path: polygon(0 0, 100% 0, 0 100%);
+    }
+    .corner-triangle-top-right {
+        top: 0;
+        right: 0;
+        /* Use clip-path to cut the square into a top-right triangle */
+        clip-path: polygon(100% 0, 100% 100%, 0 0);
+    }
+    
+    /* --- Bottom-Left Triangle --- */
+    .corner-triangle-bottom-left {
+        bottom: 0;
+        left: 0;
+        /* Use clip-path to cut the square into a bottom-left triangle */
+        clip-path: polygon(0 100%, 100% 100%, 0 0);
+    }
+    
+    /* --- Bottom-Right Triangle --- */
+    .corner-triangle-bottom-right {
+        bottom: 0;
+        right: 0;
+        /* Use clip-path to cut the square into a bottom-right triangle */
+        clip-path: polygon(100% 100%, 0 100%, 100% 0);
+    }
+    
+    .field-border-disabled {
+        background: #c0c0c07b;
+        padding: 2px;
+        box-shadow: inset
+        -1px -1px #ffffff,
+         1px 1px #808080,
+         -2px -2px #dfdfdf,
+         2px 2px #0a0a0a;
+         max-width: 950px;
+         margin: auto;
+    }
+
+    .contact-field-border-disabled {
+        background: #c0c0c07b;
+        padding: 2px;
+        margin: 2rem auto 2rem auto;
+        box-shadow: inset
+        -1px -1px #ffffff,
+         1px 1px #808080,
+         -2px -2px #dfdfdf,
+         2px 2px #0a0a0a;
+         max-width: 750px;
     }
 
     /* Header */
+
     header {
-        margin: 0rem 0rem 0rem 0rem;
-        display: flex; /* Aligns header items horizontally */
-        align-items: center; /* Vertically centers header items */
-        padding: 0px 50px; /* Adds horizontal padding */
+        width: 45%; 
+        display: center; 
+        align-items: center; 
+        padding-left: 3rem;
+        margin: 1rem auto;
+        height: auto; 
+        border: none;
+        background-color: ;
+        border: 1px solid;
+        border-top: none;
+        box-shadow: inset
+        -1px -1px #ffffff,
+         1px 1px #808080,
+         -2px -2px #dfdfdf,
+         2px 2px #0a0a0a;
     }
     
+    .logo {
+        background-color: none;
+        flex-grow: 1; 
+    }
+
     .logo img {
-        max-width: 600px; /* Increases logo size for desktop */
+        max-width: 400px; /* Increases logo size for desktop */
     }
 
     .menu {
+        /* Revised: Ensure menu only takes up the space it needs */
         width: auto;
     }
+
     .menu ul {
-        flex-direction: row; /* Ensures menu items are horizontal */
-        margin-top: -5.5rem;
-        margin-right: 10rem;
-        margin-left: 3rem;
+        /* Revised: Remove all fixed/negative margins and background color */
+        display: flex; /* Makes the ul a horizontal flex container */
+        flex-direction: row; 
+        margin: -3.5rem 6rem -2rem 0rem;
+        padding: 0;
+        background-color: transparent; /* Changed from #51534f5b */
     }
 
     .menu li {
-        margin: 0 0 0 0; /* Provides space between menu items */
-        width: auto; /* Removes the fixed width */
-        padding: 0rem 0rem 0rem 0rem;
+        /* No change needed for li spacing */
+        margin: 0 0.1rem 0 0.1rem; /* Added small horizontal spacing */
+        width: auto; 
+        padding: 0;
     }
 
     .menu a {
-        padding: 1rem 2rem 1rem 2rem;
+        /* Keep padding for link click area */
+        padding: 0.5rem .9rem; /* Reduced vertical padding slightly */
     }
+
+    /* Vertical Header Decoration - Adjusted to fit the new layout */
+    .vertical-header-decoration {
+        /* Revised: Change width to % to fit the header container */
+        background-image: url("ocean.gif");
+        width: 95%; /* Now spans the full width of its parent */
+        height: 5px;
+        /* Move it below the header using a top margin */
+        margin: 0rem 0rem 1rem 0rem;
+    }
+
+    /* Title section (if still needed, ensure it's outside the header or positioned correctly) */
+    .title {
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+        text-align: center;
+    }
+        .title picture img {
+            width: 40% !important;
+            max-height: 75px;
+            max-width: none !important;
+        }
+
+    .contact-title {
+        margin-bottom: .5rem;
+        margin-top: .25rem;
+        text-align: center;
+        }
+    
+        .contact-title picture img {
+            width: 55% !important;
+            max-height: 55px;
+            max-width: none !important;
+        }
 
     /* Main Content and Bio */
     main {
-        max-width: 1200px;
+        max-width: 1000px;
+        max-height: 1000px;
         margin: 0 auto; /* Centers the main content */
         display: flex; /* Enables flexbox for the main container */
         flex-direction: column; /* Stacks the top row and bottom box vertically */
@@ -1107,11 +1666,12 @@ button:hover {
 
     .top-row {
         display: flex; /* Makes the top row a flex container */
-        justify-content: center; /* Centers the two bio cards */
+        justify-content: ; /* Centers the two bio cards */
         gap: 0rem; /* Adds space between the two bio cards */
-        width: 100%; /* Ensures the top row container spans the full width */
         margin-bottom: 0rem; /* Adds space between the top and bottom sections */
         margin-top: 0rem;
+        align-items: center;
+        width: max-content;
     }
 
     .corner-image {
@@ -1123,14 +1683,17 @@ button:hover {
 }
     
     .bio-card {
-        width: 45%; /* Each card takes up almost half the space */
+        width:45%; /* Each card takes up almost half the space */
         padding: 0rem;
-        margin: 4rem 2rem 0rem 3.5rem;
+        margin: auto;
         align-self: flex-start;
     }
 
     .bio-card-2 {
-        margin: 1rem 0rem -1.5rem 6.3rem;
+        width: 30vw;
+        height: 10vw;
+        margin: 0rem 3rem 0rem 0rem;
+        scale: ;
     }
 
     .bio-card img {
@@ -1140,9 +1703,6 @@ button:hover {
         margin: 0rem 0rem 0rem 0rem;
     }
 
-    .bio-card-2 img {
-        padding: 0rem 0rem rem 0rem;  
-    }
     
     .bio-content {
         margin: .5rem 1rem .5rem 1rem;
@@ -1157,8 +1717,16 @@ button:hover {
     }
 
     .work-sample-card {
-        width: 90%; /* Let the work sample card be wider to fill the space */
+        width:85%; /* Let the work sample card be wider to fill the space */
         padding: 0rem;
+        margin: 2rem auto 1rem auto;
+    }
+
+    .bin-text {
+        font-size: var(--fluid-font-size);
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
     }
 
     /* Footer */
@@ -1173,9 +1741,15 @@ button:hover {
     }
 
     /* Carousel */
+
+.title
+
+.film-section {
+    max-width: 50vw;
+}
+
     .film-section, .print-section, .SFX-section {
-        margin: 0rem -2rem 0rem -2rem;
-        padding: .5rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
         border: 6px solid #ccc;
         border-style: solid;
         border-top-color: #555;
@@ -1183,13 +1757,14 @@ button:hover {
         border-right-color: #fff;
         border-bottom-color: #fff;
         outline: 2px solid #c0c0c0;
+        margin: auto;
+        max-width: 50vw;
     }
 
     .film-section h2, .print-section h2, .SFX-section h2{
-        width: 6.5vw;
-        border: none;
+        font-size: 3rem;
         z-index: 1;
-        background: none;
+        margin: auto;
     }
     .carousel-wrapper{
         margin-top: .5rem;
@@ -1197,7 +1772,8 @@ button:hover {
     }
 
     .carousel-container {
-        max-width: 1000px; /* Expands the carousel container */
+        max-height: 500px;
+        max-width: 45vw; /* Expands the carousel container */
         margin: 0 auto; /* Centers the carousel */
         padding: 1rem 1rem .5rem 1rem;
     }
@@ -1209,29 +1785,17 @@ button:hover {
     }
 
     .carousel-buttons {
-        padding: 0rem 0rem 0rem 0rem;
-        width: 81%;
+        min-width: 45vw; /* Use the same max-width as the carousel */
+        max-width: 45vw; /* New: Matches the other elements */
+        margin: 0 auto; /* New: Centers the buttons */
         height: 20px;
-        gap: rem;
+        padding: 0;
+        gap: rem; /* Note: 'rem' needs a value, e.g., '1rem' */
     }
 
     .carousel-nav {
-        align-items: center;
-        justify-content: center;
-        background: var(--c-background-button-netscape);
-        border-color: var(--color-gallery) var(--color-cod-gray) var(--color-cod-gray) var(--color-gallery);
-        border-radius: 0;
-        border-width: 2px;
-        cursor: pointer;
-        display: flex;
-        font-family: "Times New Roman";
-        font-weight: 700;
-        min-height: 0px;
-        min-width: 0px;
-        padding: 2px 2px 2px 2px;
-        position: relative;
-        white-space: nowrap;
-      
+      margin: auto;
+
       /* Zoom */
         :hover,
         :focus {
@@ -1246,9 +1810,9 @@ button:hover {
 
     }
 
-    .project-details {
-        width: 81%;
-        margin: 0rem auto 0rem auto;
+     .project-details {
+        max-width: 45vw; /* Use the same max-width as the carousel */
+        margin: 0rem auto 1rem auto; /* Center the project details */
         text-align: center;
         line-height: 1.5;
         border: 2px solid;
@@ -1257,7 +1821,9 @@ button:hover {
 
     /* Gallery */
     .gallery-section {
-
+        margin: auto;
+        padding: 0rem 0rem 0rem 0rem;
+        max-width: 950px;
     }
 
     .gallery-section h2 {
@@ -1273,14 +1839,16 @@ button:hover {
 
     .gallery-container {
         grid-template-columns: repeat(2, 1fr); /* Creates a 3-column grid */
-        max-width: 1100px; /* Increases max width */
+        max-width: 850px; /* Increases max width */
         padding: 2rem 2rem 2rem 2rem;
         background-color: ;
     }
     
     .gallery-item {
         object-fit: fill;
-    }
+        margin: .5rem;
+        border: 2px dotted rgb(0, 0, 0);
+        }
 
     .gallery-item img {
         object-fit: fill;
@@ -1297,44 +1865,151 @@ button:hover {
 
 @media screen and (min-width: 2000px) {
 
-    /* Body and General Layout */
-    body {
-        max-width: 1600px; /* Constrains the max width of the body for very large screens */
-        margin: 10rem auto;
-        ; /* Centers the content on the page */
-    }
-
-    main {
-        max-width: 1800px;
-        margin: 0 ; /* Centers main content */
-    }
-
-    .bio-card {
-        background: #fff200;
-        border: 2px solid #ccc;
-        margin: 2px auto;
-        width: 100%;
-        min-width: ;
-    }
-
-    .work-sample-card {
-        margin: 2px auto;
-        width: 100%;
-        max-width: 100vw;
-        margin: 1rem 0rem 0rem 0rem;
-    }
-
-    footer {
-        color: black;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 74.5%;
-        margin: 0 auto;
-        margin-top: 2rem;
+    html {
+        margin-top: 2;
         margin-bottom: 2rem;
-        text-align: center;
-        border: 2px solid #ccc; /* This is the new continuous border */
+    }
+
+  /* Body and General Layout */
+  body {
+    max-width: 1800px; /* New max width */
+    min-height: 1400px;
+    margin: 0 auto; 
+    border: 4px dashed #c0c0c0; /* Increased border size */
+}
+
+/* Main Content */
+main {
+    /* Set main to full body width for better use of space */
+    max-width: 100%; 
+    /* Removed max-height/min properties to allow content to flow */
+    margin: 0 auto; 
+    padding: 1rem 0; /* Add padding for internal vertical spacing */
+}
+
+header {
+    width: 35%; 
+     padding-left: 3rem;
+    margin: 1rem auto;
+    }
+
+.vertical-header-decoration {
+    /* Revised: Change width to % to fit the header container */
+    background-image: url("ocean.gif");
+    width: 89%; /* Now spans the full width of its parent */
+    height: 5px;
+    /* Move it below the header using a top margin */
+    margin: 0rem 0rem 1rem 0rem;
+}
+.vertical-header-decoration-2 {
+    rotate:calc(180deg);
+    background-image: url("ocean.gif");
+    width: 89%; /* Now spans the full width of its parent */
+    height: 5px;
+    margin: 1rem 0rem 0rem 0rem;
+}
+
+/* Titles */
+.title,
+.contact-title {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    }
+
+    .title picture img {
+        width: 30% !important; /* Slightly smaller title image */
+        max-height: 80px; /* Slightly taller */
+        max-width: none !important;
+    }
+
+.contact-title picture img {
+    width: 60% !important; /* Smaller contact title image */
+    max-height: 80px;
+    max-width: none !important;
+}
+
+.field-border-disabled {
+     max-width: 1550px;
+     margin: auto;
+}
+
+/* Top Bio Row */
+.top-row {
+    justify-content: center;
+    gap: 0rem; /* Increased gap for visual space */
+    margin: AUTO;
+    margin-bottom: 2.5rem; 
+    margin-top: 2.5rem;
+    width: 100%;
+    max-width: 1300px; 
+}
+
+/* Bio Card */
+.bio-card {
+        /* Adjusted height for more content space */
+        min-height: 320px; 
+        max-height: 350px; /* Increased max height */
+        width: 75%; 
+    }
+
+.bio-card-2 {
+   min-width: 22vw;
+    min-height: 15vw;
+}
+
+.bio-text {
+    font-size: 1.6rem; /* Use a fixed size for better readability */
+    line-height: 1.5;
+    margin: -1.9rem;
+}
+
+.bio-content {
+    margin: 5.5rem 1rem 1rem 1rem;
+    padding: auto;
+}
+
+/* Corner Image (Within Bio Cards) */
+img.corner-image {
+    position: absolute;
+    width: 3vw; /* Slightly smaller image */
+    height: 3vw; 
+    object-fit: contain;
+    z-index: 0; 
+    margin: -5.5rem -.5rem -7rem -.5rem;
+}
+
+
+/* Work Sample Card (Carousel Wrapper) */
+.work-sample-card {
+    margin: 2.5rem auto; 
+    width: 90%; /* Increased width to fill the space */
+    max-width: 1600px; /* Allows it to be very wide */
+}
+
+.card-title {
+    font-size: larger;
+}
+
+/* Footer */
+footer {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Set width to align with constrained main content or adjust */
+    width: 50%; 
+    max-width: 1000px;
+    margin: 2rem auto; /* Clean, centered margins */
+    text-align: center;
+    border: 2px solid #ccc; 
+}
+
+    .portfolio-bins-container {
+        padding: 2rem 2rem 2rem 2rem;
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr); /* Creates a 2-column grid */
+        gap: 1rem; /* Increases space between bins */
     }
 }
 /* SCROLLBAR STYLING */

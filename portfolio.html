@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
     <link rel="stylesheet" href="styles.css">
     <title>Portfolio - Jane Serenska</title>
 </head>
@@ -15,26 +16,41 @@
         </div>
         <nav class="menu">
             <ul>
-                <li style="border-right: 0px;"><a href="Gallery.html">Gallery</a></li>
-                <li style="background-color: rgb(255, 251, 0);"><a href="portfolio.html">Portfolio</a></li>
+                <li style="border-right: 0px;"><a href="portfolio.html">Portfolio</a></li>
+                <li style="background-color: rgb(255, 251, 0);"><a href="Gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+
     </header>
-
     <div class="title">
-        <h1>Portfolio of Work</h1>
-    </div>
-
+    <picture>
+        <img src="portfolio of work 600 2.gif" alt="Photo Gallery Title">
+    </picture>
+</div>
+<div class="corner-triangle corner-triangle-top-left"></div>
+<div class="corner-triangle corner-triangle-top-right"></div>
+<div class="corner-triangle corner-triangle-bottom-left"></div>
+<div class="corner-triangle corner-triangle-bottom-right"></div>
     <section class="film-section" id="film">
+        <div class="title-bar inactive">
+            <div class="title-bar-text">film work</div>
+            <div class="title-bar-controls">
+              <button aria-label="Minimize" id="minimize-btn"></button>
+              <button aria-label="Maximize" id="maximize-btn"></button>
+              <button aria-label="" inactive> <3 </button>
+            </div>
+          </div>
         <div class="sentinel"></div>
-    <h2>
+        
+        <div class="film-content">
+            <h2>
          <span class="film-letter-F">F</span>
         <span class="film-letter-I">I</span>
         <span class="film-letter-L">L</span>
         <span class="film-letter-M">M</span>
     </h2>
-        
+            
         <div class="carousel-wrapper">
             <div class="carousel-container" id="grim-all-day-carousel">
                 <div class="carousel-track">
@@ -53,8 +69,8 @@
                    </div>
                </div>     
               <div class="carousel-buttons">
-                <button class="carousel-nav" data-direction="prev" data-target="grim-all-day-carousel">Right</button>
-                <button class="carousel-nav" data-direction="next" data-target="grim-all-day-carousel">Left</button>
+                <button class="carousel-nav" data-direction="prev" data-target="grim-all-day-carousel">Left</button>
+                <button class="carousel-nav" data-direction="next" data-target="grim-all-day-carousel">Right</button>
             </div>
         
             <div class="project-details">
@@ -96,8 +112,8 @@
                 </div>
             </div>
             <div class="carousel-buttons">
-                <button class="carousel-nav" data-direction="prev" data-target="chum-carousel">Previous</button>
-                <button class="carousel-nav" data-direction="next" data-target="chum-carousel">Next</button>
+                <button class="carousel-nav" data-direction="prev" data-target="chum-carousel">Left</button>
+                <button class="carousel-nav" data-direction="next" data-target="chum-carousel">Right</button>
             </div>
         </div>
             <div class="project-details">
@@ -127,8 +143,8 @@
                     </div>
                 </div>
                 <div class="carousel-buttons">
-                    <button class="carousel-nav" data-direction="prev" data-target="christmas-with-felicity-carousel">Previous</button>
-                    <button class="carousel-nav" data-direction="next" data-target="christmas-with-felicity-carousel">Next</button>
+                    <button class="carousel-nav" data-direction="prev" data-target="christmas-with-felicity-carousel">Left</button>
+                    <button class="carousel-nav" data-direction="next" data-target="christmas-with-felicity-carousel">Right</button>
                 </div>
             </div>
                 <div class="project-details">
@@ -152,8 +168,8 @@
                         </div>
                     </div>
                     <div class="carousel-buttons">
-                        <button class="carousel-nav" data-direction="prev" data-target="loner-carousel">Previous</button>
-                        <button class="carousel-nav" data-direction="next" data-target="loner-carousel">Next</button>
+                        <button class="carousel-nav" data-direction="prev" data-target="loner-carousel">Left</button>
+                        <button class="carousel-nav" data-direction="next" data-target="loner-carousel">Right</button>
                     </div>
                 </div>
                     <div class="project-details">
@@ -161,10 +177,28 @@
                         <p class="project-credit">Directed by Ryan Hart & Emily Kempf<br></p>
                         <p class="project-role">Makeup Artist</p>
                     </div>
+        </div> <!-- End of film-content -->
     </section>
 <br>
     <section class="print-section" id="print">
-        <h2>PRINT</h2>
+        <div class="title-bar inactive">
+            <div class="title-bar-text">print work</div>
+            <div class="title-bar-controls">
+              <button aria-label="Minimize" id="print-minimize-btn"></button>
+              <button aria-label="Maximize" id="print-maximize-btn"></button>
+              <button aria-label="" inactive> <3 </button>
+              </div>
+        </div>
+        <div class="sentinel"></div>
+        
+        <div class="print-content">
+        <h2>
+            <span class="print-letter-P">P</span>
+           <span class="print-letter-R">R</span>
+           <span class="print-letter-I">I</span>
+           <span class="print-letter-N">N</span>
+           <span class="print-letter-T">T</span>
+       </h2>
 
         <div class="carousel-wrapper">
             <div class="carousel-container" id="office-magazine-carousel">
@@ -184,8 +218,8 @@
                 </div>
             </div>
             <div class="carousel-buttons">
-                <button class="carousel-nav" data-direction="prev" data-target="office-magazine-carousel">Previous</button>
-                <button class="carousel-nav" data-direction="next" data-target="office-magazine-carousel">Next</button>
+                <button class="carousel-nav" data-direction="prev" data-target="office-magazine-carousel">Left</button>
+                <button class="carousel-nav" data-direction="next" data-target="office-magazine-carousel">Right</button>
             </div>
         </div>
             <div class="project-details">
@@ -215,8 +249,8 @@
                     </div>
                 </div>
                 <div class="carousel-buttons">
-                    <button class="carousel-nav" data-direction="prev" data-target="elle-magazine-carousel">Previous</button>
-                    <button class="carousel-nav" data-direction="next" data-target="elle-magazine-carousel">Next</button>
+                    <button class="carousel-nav" data-direction="prev" data-target="elle-magazine-carousel">Left</button>
+                    <button class="carousel-nav" data-direction="next" data-target="elle-magazine-carousel">Right</button>
                 </div>
             </div>
                 <div class="project-details">
@@ -243,8 +277,8 @@
                         </div>
                     </div>
                     <div class="carousel-buttons">
-                        <button class="carousel-nav" data-direction="prev" data-target="IN-magazine-carousel">Previous</button>
-                        <button class="carousel-nav" data-direction="next" data-target="IN-magazine-carousel">Next</button>
+                        <button class="carousel-nav" data-direction="prev" data-target="IN-magazine-carousel">Left</button>
+                        <button class="carousel-nav" data-direction="next" data-target="IN-magazine-carousel">Right</button>
                     </div>
                 </div>
                     <div class="project-details">
@@ -252,10 +286,26 @@
                         <p class="project-credit">Photographed by Niko Hagen<br></p>
                         <p class="project-role">Makeup Artist</p>
                     </div>
+        </div> <!-- End of print-content -->
     </section>
 <br>
     <section class="SFX-section" id="sfx">
-        <h2>SFX</h2>
+        <div class="title-bar inactive">
+            <div class="title-bar-text">SFX work</div>
+            <div class="title-bar-controls">
+              <button aria-label="Minimize" id="sfx-minimize-btn"></button>
+              <button aria-label="Maximize" id="sfx-maximize-btn"></button>
+              <button aria-label="" inactive> <3 </button>
+              </div>
+        </div>
+        <div class="sentinel"></div>
+        
+        <div class="sfx-content">
+        <h2>
+            <span class="SFX-letter-S">S</span>
+           <span class="SFX-letter-F">F</span>
+           <span class="SFX-letter-X">X</span>
+       </h2>
 
         <div class="carousel-wrapper">
             <div class="carousel-container" id="reflections-carousel">
@@ -272,13 +322,13 @@
                 </div>
             </div>
             <div class="carousel-buttons">
-                <button class="carousel-nav" data-direction="prev" data-target="reflections-carousel">Previous</button>
-                <button class="carousel-nav" data-direction="next" data-target="reflections-carousel">Next</button>
+                <button class="carousel-nav" data-direction="prev" data-target="reflections-carousel">Left</button>
+                <button class="carousel-nav" data-direction="next" data-target="reflections-carousel">Right</button>
             </div>
         </div>
             <div class="project-details">
                 <p class="project-title">"Reflections" by Shanzyan (2024)</p>
-                <p class="project-credit">Directed by Rebecca Mendoza and Blake Nelson<br></p>
+                <p class="project-credit">Dir. by Rebecca Mendoza and Blake Nelson<br></p>
                 <p class="project-role">Special Effect Artist</p>
             </div>
 
@@ -300,8 +350,8 @@
                     </div>
                 </div>
                 <div class="carousel-buttons">
-                    <button class="carousel-nav" data-direction="prev" data-target="beyond-desire-carousel">Previous</button>
-                    <button class="carousel-nav" data-direction="next" data-target="beyond-desire-carousel">Next</button>
+                    <button class="carousel-nav" data-direction="prev" data-target="beyond-desire-carousel">Left</button>
+                    <button class="carousel-nav" data-direction="next" data-target="beyond-desire-carousel">Right</button>
                 </div>
             </div>
                 <div class="project-details">
@@ -311,11 +361,14 @@
                 </div>
 
                 <div class="carousel-wrapper">
-                    <div class="carousel-container" id="chum-carousel">
+                    <div class="carousel-container" id="chum-sfx-carousel">
                         <div class="carousel-track">
+                                <div class="carousel-item">
+                                <img src="Chum sfx 8.jpg" alt="SFX Image 8">
+                            </div>
                             <div class="carousel-item">
                                 <img src="Chum 2.jpg" alt="SFX Image 1">
-                            </div>
+                            </div> 
                             <div class="carousel-item">
                                 <img src="Chum sfx 2.jpg" alt="SFX Image 2">
                             </div>
@@ -334,14 +387,12 @@
                             <div class="carousel-item">
                                 <img src="Chum 7.jpg" alt="SFX Image 7">
                             </div>
-                            <div class="carousel-item">
-                                <img src="Chum sfx 8.jpg" alt="SFX Image 8">
-                            </div>
+                           
                         </div>
                     </div>
                     <div class="carousel-buttons">
-                        <button class="carousel-nav" data-direction="prev" data-target="chum-carousel">Previous</button>
-                        <button class="carousel-nav" data-direction="next" data-target="chum-carousel">Next</button>
+                        <button class="carousel-nav" data-direction="prev" data-target="chum-sfx-carousel">Left</button>
+                        <button class="carousel-nav" data-direction="next" data-target="chum-sfx-carousel">Right</button>
                     </div>
                 </div>
                     <div class="project-details">
@@ -349,9 +400,9 @@
                         <p class="project-credit">Directed by John Cicco<br></p>
                         <p class="project-role">Hair Stylist, Makeup Artist, Special Effects</p>
                     </div>
-
+        </div> <!-- End of sfx-content -->
     </section>
-
+</div>
 </main>
 
     <footer>
@@ -379,88 +430,141 @@
             <p>2025 Jane Serenska | All Rights Reserved.</p>
         </div>
     </footer>
- 
-                    <script>
-                        document.addEventListener('DOMContentLoaded', () => {
-                            const carousels = document.querySelectorAll('.carousel-wrapper');
-                            
-                            carousels.forEach(carouselWrapper => {
-                                const container = carouselWrapper.querySelector('.carousel-container');
-                                const track = carouselWrapper.querySelector('.carousel-track');
-                                const items = Array.from(track.querySelectorAll('.carousel-item'));
-                                const nextButton = carouselWrapper.querySelector('[data-direction="next"]');
-                                const prevButton = carouselWrapper.querySelector('[data-direction="prev"]');
+    <script>
+        // Add minimize/maximize functionality for all sections
+        document.addEventListener('DOMContentLoaded', () => {
+            // Film section
+            const filmMinimizeBtn = document.getElementById('minimize-btn');
+            const filmMaximizeBtn = document.getElementById('maximize-btn');
+            const filmSection = document.querySelector('.film-section');
+            
+            // Print section
+            const printMinimizeBtn = document.getElementById('print-minimize-btn');
+            const printMaximizeBtn = document.getElementById('print-maximize-btn');
+            const printSection = document.querySelector('.print-section');
+            
+            // SFX section
+            const sfxMinimizeBtn = document.getElementById('sfx-minimize-btn');
+            const sfxMaximizeBtn = document.getElementById('sfx-maximize-btn');
+            const sfxSection = document.querySelector('.SFX-section');
+            
+            // Generic function to handle minimize/maximize for any section
+            function setupSectionControls(minimizeBtn, maximizeBtn, section) {
+                let isMinimized = false;
+                let isMaximized = false;
                 
-                                if (!container || !track || items.length === 0 || !nextButton || !prevButton) {
-                                    console.error('Carousel elements not found for a carousel wrapper.');
-                                    return;
-                                }
+                minimizeBtn.addEventListener('click', () => {
+                    if (!isMinimized) {
+                        section.classList.add('minimized');
+                        section.classList.remove('maximized');
+                        isMinimized = true;
+                        isMaximized = false;
+                    } else {
+                        section.classList.remove('minimized');
+                        isMinimized = false;
+                    }
+                });
                 
-                                // Function to update the disabled state of the buttons
-                                const updateButtonState = () => {
-                                    const atStart = container.scrollLeft <= 0;
-                                    const atEnd = Math.ceil(container.scrollLeft) >= container.scrollWidth - container.clientWidth;
-                                    
-                                    prevButton.disabled = atStart;
-                                    nextButton.disabled = atEnd;
-                                    
-                                    if (prevButton.disabled) {
-                                        prevButton.classList.add('is-disabled');
-                                    } else {
-                                        prevButton.classList.remove('is-disabled');
-                                    }
-                                    if (nextButton.disabled) {
-                                        nextButton.classList.add('is-disabled');
-                                    } else {
-                                        nextButton.classList.remove('is-disabled');
-                                    }
-                                };
-                
-                                // Wait for all images to load before initializing the carousel
-                                const images = items.flatMap(item => Array.from(item.querySelectorAll('img')));
-                                const promises = images.map(img => {
-                                    return new Promise((resolve) => {
-                                        if (img.complete) {
-                                            resolve();
-                                        } else {
-                                            img.onload = () => resolve();
-                                            img.onerror = () => resolve();
-                                        }
-                                    });
-                                });
-                
-                                Promise.all(promises).then(() => {
-                                    const scrollAmount = 175; // Scroll by 100px each time (half of typical scroll distance)
-                
-                                    // Navigation via buttons
-                                    nextButton.addEventListener('click', () => {
-                                        container.scrollTo({
-                                            left: container.scrollLeft + scrollAmount,
-                                            behavior: 'smooth'
-                                        });
-                                        updateButtonState();
-                                    });
-                
-                                    prevButton.addEventListener('click', () => {
-                                        container.scrollTo({
-                                            left: container.scrollLeft - scrollAmount,
-                                            behavior: 'smooth'
-                                        });
-                                        updateButtonState();
-                                    });
-                
-                                    // Initial update and on window resize
-                                    window.addEventListener('resize', updateButtonState);
-                                    
-                                    // Initial update
-                                    updateButtonState();
-                                });
-                
-                                // Update button state on scroll
-                                container.addEventListener('scroll', updateButtonState);
-                            });
+                maximizeBtn.addEventListener('click', () => {
+                    if (!isMaximized) {
+                        section.classList.add('maximized');
+                        section.classList.remove('minimized');
+                        isMaximized = true;
+                        isMinimized = false;
+                    } else {
+                        section.classList.remove('maximized');
+                        isMaximized = false;
+                    }
+                });
+            }
+            
+            // Set up controls for each section
+            setupSectionControls(filmMinimizeBtn, filmMaximizeBtn, filmSection);
+            setupSectionControls(printMinimizeBtn, printMaximizeBtn, printSection);
+            setupSectionControls(sfxMinimizeBtn, sfxMaximizeBtn, sfxSection);
+        });
+        
+        // Original carousel functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const carousels = document.querySelectorAll('.carousel-wrapper');
+            
+            carousels.forEach(carouselWrapper => {
+                const container = carouselWrapper.querySelector('.carousel-container');
+                const track = carouselWrapper.querySelector('.carousel-track');
+                const items = Array.from(track.querySelectorAll('.carousel-item'));
+                const nextButton = carouselWrapper.querySelector('[data-direction="next"]');
+                const prevButton = carouselWrapper.querySelector('[data-direction="prev"]');
+
+                if (!container || !track || items.length === 0 || !nextButton || !prevButton) {
+                    console.error('Carousel elements not found for a carousel wrapper.');
+                    return;
+                }
+
+                // Function to update the disabled state of the buttons
+                const updateButtonState = () => {
+                    const atStart = container.scrollLeft <= 0;
+                    const atEnd = Math.ceil(container.scrollLeft) >= container.scrollWidth - container.clientWidth;
+                    
+                    prevButton.disabled = atStart;
+                    nextButton.disabled = atEnd;
+                    
+                    if (prevButton.disabled) {
+                        prevButton.classList.add('is-disabled');
+                    } else {
+                        prevButton.classList.remove('is-disabled');
+                    }
+                    if (nextButton.disabled) {
+                        nextButton.classList.add('is-disabled');
+                    } else {
+                        nextButton.classList.remove('is-disabled');
+                    }
+                };
+
+                // Wait for all images to load before initializing the carousel
+                const images = items.flatMap(item => Array.from(item.querySelectorAll('img')));
+                const promises = images.map(img => {
+                    return new Promise((resolve) => {
+                        if (img.complete) {
+                            resolve();
+                        } else {
+                            img.onload = () => resolve();
+                            img.onerror = () => resolve();
+                        }
+                    });
+                });
+
+                Promise.all(promises).then(() => {
+                    const scrollAmount = 175; // Scroll by 100px each time (half of typical scroll distance)
+
+                    // Navigation via buttons
+                    nextButton.addEventListener('click', () => {
+                        container.scrollTo({
+                            left: container.scrollLeft + scrollAmount,
+                            behavior: 'smooth'
                         });
-                    </script>
+                        updateButtonState();
+                    });
+
+                    prevButton.addEventListener('click', () => {
+                        container.scrollTo({
+                            left: container.scrollLeft - scrollAmount,
+                            behavior: 'smooth'
+                        });
+                        updateButtonState();
+                    });
+
+                    // Initial update and on window resize
+                    window.addEventListener('resize', updateButtonState);
+                    
+                    // Initial update
+                    updateButtonState();
+                });
+
+                // Update button state on scroll
+                container.addEventListener('scroll', updateButtonState);
+            });
+        });
+    </script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const currentPath = window.location.pathname;
@@ -481,46 +585,62 @@
     $("#fake").click(function() {
   $("html").toggleClass("csstransforms");
 });
-
 </script>
 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-  // Select the sticky header and the new sentinel element
-  const filmHeader = document.querySelector('.film-section h2');
-  const sentinel = document.querySelector('.film-section .sentinel');
-
-  // If the elements don't exist, stop the script
-  if (!filmHeader || !sentinel) {
-    console.error('Required elements not found.');
-    return;
-  }
-
-  // Set observer options: trigger when the sentinel element is no longer visible
-  const observerOptions = {
-    root: null, // use the viewport
-    threshold: 0 // trigger when the sentinel is fully out of view
-  };
-
-  // Define the callback function that will run when the visibility changes
-  const observerCallback = (entries) => {
-    entries.forEach(entry => {
-      // The header becomes sticky when the sentinel is no longer intersecting
-      if (!entry.isIntersecting) {
-        filmHeader.classList.add('visible');
-      } else {
-        // When the sentinel is back in view, the header is no longer sticky
-        filmHeader.classList.remove('visible');
-      }
-    });
-  };
-
-  // Create the observer
-  const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-  // Tell the observer to watch the sentinel element
-  observer.observe(sentinel);
-});
+    document.addEventListener('DOMContentLoaded', () => {
+        // Define a map of sections to their respective header and sentinel selectors
+        const sections = {
+          'film': {
+            headerSelector: '.film-section h2',
+            sentinelSelector: '.film-section .sentinel'
+          },
+          'print': {
+            headerSelector: '.print-section h2',
+            sentinelSelector: '.print-section .sentinel'
+          },
+          'SFX': {
+            headerSelector: '.SFX-section h2',
+            sentinelSelector: '.SFX-section .sentinel'
+          }
+        };
+      
+        // Iterate over each section to set up the IntersectionObserver
+        for (const key in sections) {
+          const section = sections[key];
+          const header = document.querySelector(section.headerSelector);
+          const sentinel = document.querySelector(section.sentinelSelector);
+      
+          // If elements for a section don't exist, log an error and skip
+          if (!header || !sentinel) {
+            console.error(`Required elements not found for the ${key} section.`);
+            continue; // Skip to the next section in the loop
+          }
+      
+          // Set observer options: trigger when the sentinel element is no longer visible
+          const observerOptions = {
+            root: null, // use the viewport
+            threshold: 0 // trigger when the sentinel is fully out of view
+          };
+      
+          // Define the callback function that will run when the visibility changes
+          const observerCallback = (entries) => {
+            entries.forEach(entry => {
+              // The header becomes sticky when the sentinel is no longer intersecting
+              if (!entry.isIntersecting) {
+                header.classList.add('visible');
+              } else {
+                // When the sentinel is back in view, the header is no longer sticky
+                header.classList.remove('visible');
+              }
+            });
+          };
+      
+          // Create and start the observer for the current section
+          const observer = new IntersectionObserver(observerCallback, observerOptions);
+          observer.observe(sentinel);
+        }
+      });
 </script>
 </body>
 </html>

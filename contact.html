@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
     <link rel="stylesheet" href="styles.css">
     <title>Contact - Jane Serenska</title>
 </head>
 <body>
-  <header>
+        <header>
         <div class="logo">
             <a href="index.html">
             <img src="jane logo 2.png" alt="Company Logo">
@@ -15,13 +16,23 @@
         </div>
         <nav class="menu">
             <ul>
-                <li style="border-right: 0px;"><a href="Gallery.html">Gallery</a></li>
                 <li style="border-right: 0px;"><a href="portfolio.html">Portfolio</a></li>
+                <li style="border-right: 0px;"><a href="Gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
+    <div class="contact-field-border-disabled" style="padding: 20px">
 
+    <div class="contact-title">
+        <picture>
+        <img src="say-hello 300.gif" alt="">
+    </picture>
+    </div>
+    <div class="corner-triangle corner-triangle-top-left"></div>
+    <div class="corner-triangle corner-triangle-top-right"></div>
+    <div class="corner-triangle corner-triangle-bottom-left"></div>
+    <div class="corner-triangle corner-triangle-bottom-right"></div>
     <form action="https://api.web3forms.com/submit" method="POST" id="form">
         <fieldset>
           <legend>Contact Form</legend>
@@ -53,9 +64,7 @@
         </fieldset>
       </form>
     </main>
-
-</body>
-
+</div>
     <footer>
         <div class="footer-top">
             <div class="footer-box footer-return-box">
@@ -81,7 +90,6 @@
             <p>2025 Jane Serenska | All Rights Reserved.</p>
         </div>
     </footer>
-
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const currentPath = window.location.pathname;
@@ -97,5 +105,5 @@
         });
     });
 </script>
-
+</body>
 </html>
