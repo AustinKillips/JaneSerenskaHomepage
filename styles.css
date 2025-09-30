@@ -45,6 +45,7 @@ body {
 .field-border-disabled {
     background-color: #ffffff00;
     box-shadow: none;
+    margin: 0rem
 }
 
 header {
@@ -294,13 +295,14 @@ main {
     border-left-color: #555;
     border-right-color: #fff;
     border-bottom-color: #fff;
-    background: rgb(241, 245, 13);
     outline: 2px solid #c0c0c0;
-    margin: 2px auto;
+    margin: 0px auto;
     width: 100%;
     max-width: 450px;
-    padding: 0rem 0rem 0.5rem 0rem;
+    padding: 0rem 0rem 0rem 0rem;
     position: relative; /* This is crucial for positioning the images absolutely */
+    min-height: 35vh;
+    max-height: 40vh;
 }
 
 
@@ -309,6 +311,12 @@ main {
     height:10vw;
     margin: .5rem .5rem 0rem .5rem;
     object-fit: contain;
+}
+
+.jspaint {
+    position: relative;
+    min-height: 36.5vh;
+    max-height: 36.5vh;
 }
 
 .bio-card-2 {
@@ -416,9 +424,10 @@ main {
     .portfolio-bins-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr); /* Creates a 3-column grid */
-        gap: .2rem;
+        height: fit-content;
+        gap: .6rem;
         max-width: 100%;
-        padding: .75rem .5rem .75rem .5rem;
+        padding: .75rem .75rem .75rem .75rem;
         margin: 0rem 0rem 0rem 0rem;
         align-items: center;
     }
@@ -426,18 +435,14 @@ main {
     /* Individual Portfolio Bin and Image Styling */
     .portfolio-bin {
         position: relative;
-        aspect-ratio: 16/9; /* Changed to a portrait aspect ratio */
         margin: 0 0 0 0;
-    }
-    
-    .portfolio-bin img {
         width: 100%;
-        height: 100%;
+        height: auto;
         display: block;
         object-fit: cover;
-        aspect-ratio: 16/9;
-        margin: 0;
     }
+    
+
     
     .portfolio-bin a {
         display: block;
@@ -492,10 +497,14 @@ main {
     
     /* Text inside the overlay */
     .bin-text {
-        font-size: var(--fluid-font-size);
-        color: #fff;
         text-align: center;
-        padding: 1rem;
+        padding: .5rem;
+        border-top-color: #888;
+        border-left-color: #888;
+        border-right-color: #f0f0f0;
+        border-bottom-color: #f0f0f0;
+        transform: translate(2px, 2px);
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
     }
     
     /* Hover effect */
@@ -1156,7 +1165,6 @@ button:hover {
         min-height: fit-content;
         min-width: 500px;
         padding: 2rem;
-        min-height: 100vh;
     }
     .corner-triangle {
         position: absolute;
@@ -1228,6 +1236,8 @@ button:hover {
          1px 1px #808080,
          -2px -2px #dfdfdf,
          2px 2px #0a0a0a;
+         min-width: 85vw;
+         max-width: 90vw;
     }
 
     .contact-field-border-disabled {
@@ -1326,11 +1336,24 @@ button:hover {
     }
 
     .bio-card {
-        width:40vw; /* Each card takes up almost half the space */
+        width: auto /* Each card takes up almost half the space */
         padding: 0rem;
-        margin: 1.2rem auto 0rem auto ;
+        margin: auto;
         align-self: flex-start;
+        position: relative;
+        min-height: 30vh;
+        max-height: 30vh;
+        min-width: 250px;
+        max-width: 600px;
     }
+
+    .jspaint {
+        position: relative;
+        min-height: 28vh;
+        max-height: 28vh;
+        min-width: 400px;
+    }
+    
 
     .bio-text {
     padding: 0rem 2.5rem 0rem 2.5rem; /* Adjust padding to separate text from images */
@@ -1346,6 +1369,18 @@ button:hover {
         scale: ;
     }   
 
+.portfolio-bins-container {
+    padding: 2rem;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr); /* Creates a 2-column grid */
+    gap: 1rem; /* Increases space between bins */
+}
+
+
+    .bin-text {
+        font-size: xx-large;
+        padding: 1rem;
+    }
 /* This is the CSS Styling for the Gallery sections */
 
 .gallery-section {
@@ -1388,13 +1423,7 @@ button:hover {
     object-fit: fill;
 }
 
-/* Portfolio Bins */
-.portfolio-bins-container {
-    padding: 2rem 2rem 2rem 2rem;
-    width: 100%;
-    grid-template-columns: repeat(3, 1fr); /* Creates a 2-column grid */
-    gap: 1rem; /* Increases space between bins */
-}
+
 
 /* This is the CSS Styling for the Portfolio sections */
 
@@ -1478,7 +1507,7 @@ button:hover {
     
     body {
         max-width: 1400px; 
-        margin: 0 auto;
+        margin: auto auto;
         border: 2px dashed #c0c0c0;
         position: relative;
         min-width: 1000px;
@@ -1540,8 +1569,10 @@ button:hover {
          1px 1px #808080,
          -2px -2px #dfdfdf,
          2px 2px #0a0a0a;
-         max-width: 950px;
-         margin: auto;
+         max-width: 650px;
+         min-width: 55vw;
+         max-width: 1050px;
+         min-height: 40vh;
     }
 
     .contact-field-border-disabled {
@@ -1657,7 +1688,7 @@ button:hover {
     
     .business-card{
         display: block;
-        width: 40vw;
+        width: 10vw;
         height:14vw;
         object-fit: contain;
         margin: 0rem 0rem 0rem 0rem;
@@ -1683,14 +1714,22 @@ button:hover {
 }
     
     .bio-card {
-        width:45%; /* Each card takes up almost half the space */
         padding: 0rem;
         margin: auto;
         align-self: flex-start;
+        min-width: 35vw;
     }
 
+    .jspaint {
+        position: relative;
+        min-height: 27vh;
+        max-height: 28vh;
+        min-width: 34vw;
+    }
+    
+
     .bio-card-2 {
-        width: 30vw;
+        width: 35vw;
         height: 10vw;
         margin: 0rem 3rem 0rem 0rem;
         scale: ;
@@ -1717,14 +1756,12 @@ button:hover {
     }
 
     .work-sample-card {
-        width:85%; /* Let the work sample card be wider to fill the space */
+        width:95%; /* Let the work sample card be wider to fill the space */
         padding: 0rem;
         margin: 2rem auto 1rem auto;
     }
 
     .bin-text {
-        font-size: var(--fluid-font-size);
-        color: #fff;
         text-align: center;
         padding: 1rem;
     }
@@ -1865,15 +1902,14 @@ button:hover {
 @media screen and (min-width: 2000px) {
 
     html {
-        margin-top: 2;
-        margin-bottom: 2rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
 
   /* Body and General Layout */
   body {
     max-width: 1800px; /* New max width */
-    min-height: 1400px;
-    margin: 0 auto; 
+    margin: auto auto; 
     border: 4px dashed #c0c0c0; /* Increased border size */
 }
 
@@ -1883,13 +1919,49 @@ main {
     max-width: 100%; 
     /* Removed max-height/min properties to allow content to flow */
     margin: 0 auto; 
-    padding: 1rem 0; /* Add padding for internal vertical spacing */
+    padding: 0rem 0; /* Add padding for internal vertical spacing */
 }
 
 header {
-    width: 35%; 
-     padding-left: 3rem;
+    width: 33%; 
+     padding-left: 1rem;
     margin: 1rem auto;
+    }
+
+    .logo {
+        background-color: none;
+        flex-grow: 1; 
+    }
+
+    .logo img {
+        max-width: 450px; /* Increases logo size for desktop */
+    }
+
+    .menu {
+        /* Revised: Ensure menu only takes up the space it needs */
+        width: auto;
+    }
+
+    .menu ul {
+        /* Revised: Remove all fixed/negative margins and background color */
+        display: flex; /* Makes the ul a horizontal flex container */
+        flex-direction: row; 
+        margin: -3.5rem 6rem -2rem 0rem;
+        padding: 0;
+        background-color: transparent; /* Changed from #51534f5b */
+    }
+
+    .menu li {
+        /* No change needed for li spacing */
+        margin: 0 0.1rem 0 0.1rem; /* Added small horizontal spacing */
+        width: auto; 
+        padding: 0;
+    }
+
+    .menu a {
+        font-size: larger;
+        /* Keep padding for link click area */
+        padding: 0.5rem .9rem; /* Reduced vertical padding slightly */
     }
 
 .vertical-header-decoration {
@@ -1905,7 +1977,7 @@ header {
     background-image: url("ocean.gif");
     width: 89%; /* Now spans the full width of its parent */
     height: 5px;
-    margin: 1rem 0rem 0rem 0rem;
+    margin: 0rem 0rem 0rem 0rem;
 }
 
 /* Titles */
@@ -1929,8 +2001,17 @@ header {
 }
 
 .field-border-disabled {
-     max-width: 1550px;
+    min-width: 55vw;
+     max-width: 1050px;
+     min-height: 40vh;
      margin: auto;
+}
+
+.jspaint {
+    position: relative;
+    min-height: 35vh;
+    min-width: 35vw;
+    margin: auto;
 }
 
 /* Top Bio Row */
@@ -1950,6 +2031,8 @@ header {
         min-height: 320px; 
         max-height: 350px; /* Increased max height */
         width: 75%; 
+        min-height: 37.2vh;
+        min-width: 35vw;
     }
 
 .bio-card-2 {
@@ -1981,9 +2064,22 @@ img.corner-image {
 
 /* Work Sample Card (Carousel Wrapper) */
 .work-sample-card {
-    margin: 2.5rem auto; 
-    width: 90%; /* Increased width to fill the space */
+    margin: 2rem auto 0rem auto; 
+    width: 80%; /* Increased width to fill the space */
     max-width: 1600px; /* Allows it to be very wide */
+}
+
+.portfolio-bins-container {
+    padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr); /* Creates a 2-column grid */
+    gap: 1rem; /* Increases space between bins */
+}
+
+
+    .bin-text {
+        font-size: xxx-large;
+        padding: 2.5rem;
 }
 
 .card-title {
