@@ -1977,7 +1977,7 @@ header {
     background-image: url("ocean.gif");
     width: 89%; /* Now spans the full width of its parent */
     height: 5px;
-    margin: 0rem 0rem 0rem 0rem;
+    margin: 1rem 0rem 0rem 0rem;
 }
 
 /* Titles */
@@ -2009,8 +2009,8 @@ header {
 
 .jspaint {
     position: relative;
-    min-height: 35vh;
-    min-width: 35vw;
+    min-height: 29vh;
+    min-width: 29vw;
     margin: auto;
 }
 
@@ -2028,11 +2028,9 @@ header {
 /* Bio Card */
 .bio-card {
         /* Adjusted height for more content space */
-        min-height: 320px; 
-        max-height: 350px; /* Increased max height */
-        width: 75%; 
-        min-height: 37.2vh;
-        min-width: 35vw;
+        width: 100%; 
+        min-height: 30vh;
+        min-width: 30vw;
     }
 
 .bio-card-2 {
