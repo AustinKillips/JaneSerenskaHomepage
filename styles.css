@@ -139,12 +139,11 @@ header {
 
 .vertical-header-decoration {
     /* Revised: Change width to % to fit the header container */
-    background-image: url("ocean.gif");
-    width: 99%; /* Now spans the full width of its parent */
+    background-image: url(ocean.gif);
+    width: 76%;
     height: 5px;
-    /* Move it below the header using a top margin */
-    margin: 0rem 0rem 1rem 0rem;
-}
+    margin: 0rem auto 1rem auto;
+
 .vertical-header-decoration-2 {
     rotate:calc(180deg);
     background-image: url("ocean.gif");
