@@ -128,7 +128,7 @@ header {
 .vertical-header-decoration {
     /* Revised: Change width to % to fit the header container */
     background-image: url("ocean.gif");
-    width: 92%; /* Now spans the full width of its parent */
+    width: 99%; /* Now spans the full width of its parent */
     height: 5px;
     /* Move it below the header using a top margin */
     margin: 0rem 0rem 1rem 0rem;
@@ -136,7 +136,7 @@ header {
 .vertical-header-decoration-2 {
     rotate:calc(180deg);
     background-image: url("ocean.gif");
-    width: 92%; /* Now spans the full width of its parent */
+    width: 99%; /* Now spans the full width of its parent */
     height: 5px;
     margin: 1rem 0rem 0rem 0rem;
 }
@@ -1831,21 +1831,23 @@ button:hover {
     z-index: 0; /* Ensures images are behind the text */
 }
     
-    .bio-card {
-        padding: 0rem;
-        margin: auto;
-        align-self: flex-start;
-        min-width: 35vw;
-    }
+.bio-card {
+    padding: 0rem;
+    margin: auto;
+    align-self: flex-start;
+    min-width: 35vw;
+    min-height: 27vh;
+    max-height: 29.5vh;
+}
 
-    .jspaint {
-        position: relative;
-        min-height: 27vh;
-        max-height: 28vh;
-        min-width: 34vw;
-    }
+.jspaint {
+    position: relative;
+    max-height: 29vh;
+    min-width: 34vw;
+    width: 100%;
+    height: 1; 
+}
     
-
     .bio-card-2 {
         width: 35vw;
         height: 10vw;
@@ -2017,6 +2019,19 @@ button:hover {
     }
 }
 
+@media screen and (min-width: 1440px) {
+
+
+.vertical-header-decoration-2 {
+    width: 55vw;
+}
+
+.jspaint {
+
+    
+}
+
+}
 @media screen and (min-width: 2000px) {
 
     html {
