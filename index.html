@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <link rel="stylesheet" href="https://unpkg.com/98.css">
     <link rel="stylesheet" href="styles.css">
-    <title>Jane Serenska</title>
+    <title>Jane Serenska | Professional Hair, Makeup & SFX </title>
 </head>
 <body> 
     <header>
     <div class="logo">
         <a href="index.html">
-    <img src="jane logo 2.png" alt="a clickable wordmark logo that reads 'Jane Serenska' with drawn images of bobby pins and a hand putting eyeshadow on to the right of the text">
+    <img src="jane logo 2.png" alt="Jane Serenska professional portfolio logo.">
         </a>
         </div>
         <nav class="menu">
@@ -27,7 +27,9 @@
            <div class="vertical-header-decoration"></div>
         <div class="field-border-disabled" style="">
             <div class="bio-card">
+                <h1 class="visually-hidden">Jane Serenska - New York and Chicago based Hair Stylist, Makeup Artist, and Special Effects Artist</h1>
                 <h5 class="card-title">About Jane</h5>
+                <h2 class="visually-hidden">Jane Serenska is a New York and Chicago based hair stylist, makeup artist, and special effects artist</h2>
                 <iframe class="jspaint" 
                         src="jspaint/index.html" 
                         id="jspaint-iframe" 
@@ -97,12 +99,14 @@
     // --- Core JSPaint Loader Function ---
     // Loads a specified image URL into the jspaint iframe.
     function loadImageIntoJSPaint(imageURL) {
-        // Get the iframe and its content window inside the function
         const iframe = document.getElementById("jspaint-iframe");
+        // Check if iframe and its content window exist before proceeding
+        if (!iframe || !iframe.contentWindow) return;
+        
         const jspaint = iframe.contentWindow;
 
-        // Wait for the iframe's systemHooks to be ready
-        waitUntil(() => jspaint.systemHooks, 500, () => {
+        // PERFORMANCE FIX: Reduced polling interval to 50ms
+        waitUntil(() => jspaint.systemHooks, 50, () => {
             // 1. Define the custom file reading hook (your existing logic)
             jspaint.systemHooks.readBlobFromHandle = async (file_handle) => {
                 try {
@@ -120,7 +124,6 @@
             // 2. Load the image using the provided URL (imageURL)
             jspaint.systemHooks.readBlobFromHandle(imageURL).then(file => {
                 if (file) {
-                    // Use true for the second argument to prevent showing a confirmation dialog
                     jspaint.open_from_file(file, imageURL, true); 
                 } else {
                     jspaint.show_error_message(`Failed to open file ${imageURL}`);
@@ -159,11 +162,10 @@
 
     // --- Event Listeners ---
     
-    // Call the function on initial page load
-    window.addEventListener('load', handleScreenSize);
+    // PERFORMANCE FIX: Call the function as soon as the DOM is ready (faster than window.load)
+    window.addEventListener('DOMContentLoaded', handleScreenSize);
 
     // Call the function when the window is resized.
-    // Use debouncing (setTimeout) to prevent excessive function calls during resizing.
     let resizeTimeout;
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimeout);
