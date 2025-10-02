@@ -315,11 +315,11 @@ main {
     outline: 2px solid #c0c0c0;
     margin: 0px auto;
     width: 100%;
-    max-width: 450px;
+    max-width: 330px;
     padding: 0rem 0rem 0rem 0rem;
-    position: relative; /* This is crucial for positioning the images absolutely */
-    min-height: 35vh;
-    max-height: 40vh;
+    position: relative;
+    min-height: 267px;
+    max-height: 267px;
 }
 
 
@@ -332,8 +332,8 @@ main {
 
 .jspaint {
     position: relative;
-    min-height: 36.5vh;
-    max-height: 36.5vh;
+    height: 243px;
+    width: 324px;
 }
 
 .bio-card-2 {
@@ -1466,9 +1466,8 @@ button:hover {
 
     .jspaint {
         position: relative;
-        min-height: 23vh;
-        max-height: 25vh;
-        min-width: 400px;
+        min-width: 100%;
+        min-height: 99%;
     }
     
 
