@@ -16,6 +16,7 @@
 }
 
 html {
+
 }
 
 @font-face { 
@@ -42,10 +43,14 @@ body {
     padding: 0rem .5rem 0rem .5rem;
 }
 
+h1 {
+    font-size: small;
+}
+
 .field-border-disabled {
     background-color: #ffffff00;
     box-shadow: none;
-    margin: 0rem
+    margin: 0rem;
 }
 
 header {
@@ -396,8 +401,8 @@ main {
 
 
 .contact-title {
-    margin-bottom: .5rem;
-    margin-top: -1.25rem;
+    margin-bottom: 0rem;
+    margin-top: 0rem;
     text-align: center;
     }
 
@@ -627,8 +632,7 @@ button:hover {
     outline: 2px solid #c0c0c0;
     padding: 0rem 0rem 0rem 0rem;
     margin: auto 1rem auto 1rem;
-    z-index: -100;    
-}
+    }
    
 .gallery-section h2 {
     font-size: 2rem;
@@ -672,9 +676,89 @@ button:hover {
     display: block;
 }
 
+
+/* 1. Full-Screen Overlay (The Dimmer) */
+/* 1. Full-Screen Overlay (The Dimmer) - Keep this for dimming and centering */
+#lightbox-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Creates the dimming effect */
+    background-color: rgba(0, 0, 0, 0.9); 
+    
+    /* Ensure it's above all page content */
+    z-index: 1000;
+    
+    /* Center the content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Start in a hidden state */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* 2. Active State */
+#lightbox-modal.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 3. Modal Content (The 98.css Window) */
+.modal-content.window {
+    /* Override 98.css max-width/height if necessary for responsiveness */
+    max-width: 75vw;
+    max-height: 75vh;
+    
+    /* Ensure the window content scales relative to the window element */
+    display: flex;
+    flex-direction: column; 
+}
+
+/* 4. Window Body (Image Container) */
+.modal-content .window-body {
+    /* Set padding/overflow specific to image view */
+    padding: 10px;
+    overflow-y: auto; /* Allows scrolling if the content is too tall */
+    flex-grow: 1; /* Allows it to expand within the modal */
+    
+    /* Set min-height so the window isn't tiny when the image hasn't loaded */
+    min-height: 50px; 
+    
+    /* Apply 98.css field-set or other decorative classes here if you want an inner border */
+}
+
+/* 5. The Image */
+#lightbox-image {
+    display: block;
+    max-width: 73vw;
+    max-height: 62vh; /* Image fills its container */
+    object-fit: contain; 
+    margin: 0 auto;
+}
+
+/* 6. Caption/Text */
+#lightbox-caption {
+    text-align: center;
+    /* Optional: Style caption using 98.css text styles */
+}
+
+/* 7. Close Button Adjustments (Using 98.css button structure) */
+/* The buttons are styled by 98.css, but we target the ID for focus consistency */
+#close-modal:focus {
+    /* Ensure a clear focus indicator despite 98.css styling */
+    outline: 2px solid blue; 
+}
+
 /* The single, unified overlay for text */
 /* Container for the overlay to ensure relative positioning */
 
+/*
 .overlay {
     position: absolute;
     top: 65%;
@@ -693,7 +777,7 @@ button:hover {
     font-family: 'Lucida Console', 'Courier New', monospace;
     padding: 10px;
     box-sizing: border-box;
-}
+}/*
 
 .overlay-text {
     color: var(--text-color-primary);
@@ -711,22 +795,26 @@ button:hover {
 }
 
 /* Hover effect for the container */
+/*
 .portfolio-bin:hover .overlay {
     opacity: 1; /* Makes the overlay visible on hover */
     background-color: rgb(192, 192, 192); /* Slightly less transparent on hover */
 }
-
+/*
 .portfolio-bin:hover .overlay-text {
     color: #000000; /* Darker text on hover */
     text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff; /* Enhanced text shadow on hover */
 }
 
 /* Hover effect */
+
+/*
 .gallery-item:hover .overlay {
     opacity: 1; /* Makes the overlay visible on hover */
 }
 
 /* Text animation on hover */
+/*
 .gallery-item:hover .overlay-text {
     transform: translateY(0); /* Moves the text into position */
 }
@@ -1114,6 +1202,18 @@ button:hover {
 
         }
 
+        .visually-hidden {
+            position: absolute !important;
+            width: 1px !important;
+            height: 1px !important;
+            padding: 0 !important;
+            margin: -1px !important; /* Move it off-screen */
+            overflow: hidden !important;
+            clip: rect(1px, 1px, 1px, 1px) !important; /* Clip the content to 1x1 pixel */
+            white-space: nowrap !important; /* Prevent text wrapping */
+            border: 0 !important;
+        }
+
         .project-details {
             width: 77vw; /* Use the same max-width as the carousel */
             margin: 0 auto 1rem; /* Corrects horizontal margin and centers the details */
@@ -1230,7 +1330,7 @@ button:hover {
 
     .field-border-disabled {
         background: #c0c0c07b;
-        padding: 2px;
+        padding: 25px;
         box-shadow: inset
         -1px -1px #ffffff,
          1px 1px #808080,
@@ -1249,6 +1349,7 @@ button:hover {
          1px 1px #808080,
          -2px -2px #dfdfdf,
          2px 2px #0a0a0a;
+         min-width: 600px;
     }
     
     .logo img {
@@ -1341,16 +1442,16 @@ button:hover {
         margin: auto;
         align-self: flex-start;
         position: relative;
-        min-height: 30vh;
-        max-height: 30vh;
+        min-height: 25vh;
+        max-height: 25.5vh;
         min-width: 250px;
         max-width: 600px;
     }
 
     .jspaint {
         position: relative;
-        min-height: 28vh;
-        max-height: 28vh;
+        min-height: 23vh;
+        max-height: 25vh;
         min-width: 400px;
     }
     
@@ -1563,7 +1664,8 @@ button:hover {
     
     .field-border-disabled {
         background: #c0c0c07b;
-        padding: 2px;
+        padding: 40px;
+  
         box-shadow: inset
         -1px -1px #ffffff,
          1px 1px #808080,
@@ -1578,13 +1680,13 @@ button:hover {
     .contact-field-border-disabled {
         background: #c0c0c07b;
         padding: 2px;
-        margin: 2rem auto 2rem auto;
+        margin: 0rem auto 0rem auto;
         box-shadow: inset
         -1px -1px #ffffff,
          1px 1px #808080,
          -2px -2px #dfdfdf,
          2px 2px #0a0a0a;
-         max-width: 750px;
+         max-width: 650px;
     }
 
     /* Header */
@@ -2001,15 +2103,17 @@ header {
 }
 
 .field-border-disabled {
-    min-width: 55vw;
+    min-width: 49vw;
      max-width: 1050px;
      min-height: 40vh;
      margin: auto;
+     padding-top: 40px;
+     padding-bottom: 40px;
 }
 
 .jspaint {
     position: relative;
-    min-height: 29vh;
+    min-height: 28vh;
     min-width: 29vw;
     margin: auto;
 }

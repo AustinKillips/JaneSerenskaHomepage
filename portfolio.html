@@ -11,7 +11,7 @@
     <header>
         <div class="logo">
             <a href="index.html">
-            <img src="jane logo 2.png" alt="Company Logo">
+            <img src="jane logo 2.png" alt="a clickable wordmark logo that reads 'Jane Serenska' with drawn images of bobby pins and a hand putting eyeshadow on to the right of the tex">
         </a>
         </div>
         <nav class="menu">
@@ -23,18 +23,19 @@
         </nav>
 
     </header>
-    <div class="title">
+   <h1 class="title">
     <picture>
-        <img src="portfolio of work 600 2.gif" alt="Photo Gallery Title">
-    </picture>
-</div>
+        <img src="portfolio of work 600 2.gif" alt="a gif of a 'blinkie' style button with the words 'Portfolio of Work' written in bubbly text abutted by sparkling stars">
+    </picture> 
+    </h1>
+
     <section class="film-section" id="film">
         <div class="title-bar inactive">
             <div class="title-bar-text">film work</div>
             <div class="title-bar-controls">
-              <button aria-label="Minimize" id="minimize-btn"></button>
-              <button aria-label="Maximize" id="maximize-btn"></button>
-              <button aria-label="" inactive> <3 </button>
+              <button aria-label="Minimize" id="film-minimize-btn"></button>
+              <button aria-label="Maximize" id="film-maximize-btn"></button>
+              <button aria-hidden="true" inactive> <3 </button>
             </div>
           </div>
         <div class="sentinel"></div>
@@ -50,23 +51,30 @@
         <div class="carousel-wrapper">
             <div class="carousel-container" id="grim-all-day-carousel">
                 <div class="carousel-track">
-                    <div class="carousel-item">
-                        <img class="is-portrait" src="Grim All Day 1.jpg" alt="Film Image 1">
+                    <div class="carousel-item" aria-hidden="false" tabindex="0">
+                        <img class="is-portrait" src="Grim All Day 1.jpg" alt="Poster for the short film 'Grim All Day' featuring the protagonist wearing white makeup, almost reminiscent of a goth-mime, and smoking a cigarette that is emitting a plume of drawn smoke that holds the title stylized in a bold sans-serif font ">
                     </div>
-                    <div class="carousel-item">
-                        <img src="Grim All Day 2.png" alt="Film Image 2">
+                    <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                        <img src="Grim All Day 2.png" alt="The short films protagonist, clad in their goth-mime makeup, is in art gallery and gesturing with both hands on their head. They almost appear to be attemping to scare someone">
                     </div>
-                    <div class="carousel-item">
-                        <img src="Grim All Day 3.png" alt="Film Image 3">
+                    <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                        <img src="Grim All Day 3.png" alt="Two characters are seated on a moped, the protagonist looks forlorn and is riding as passenger with their hands clasped around the driver">
                     </div>
-                    <div class="carousel-item">
-                        <img src="Grim All Day 4.png" alt="Film Image 4">
+                    <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                        <img src="Grim All Day 4.png" alt="The protagonist's face is only partially covered in makeup as they sit at table, they appear to be engaged in a tense discussion with a woman." >
                     </div>
+
+                    <div 
+                    class="visually-hidden" 
+                    aria-live="polite" 
+                    id="grim-all-day-status">
+                    Image 1 of 4 visible.
+                </div>
                    </div>
                </div>     
               <div class="carousel-buttons">
-                <button class="carousel-nav" data-direction="prev" data-target="grim-all-day-carousel">Left</button>
-                <button class="carousel-nav" data-direction="next" data-target="grim-all-day-carousel">Right</button>
+                <button class="carousel-nav" data-direction="prev" data-target="grim-all-day-carousel" aria-label="View previous image in Grim All Day portfolio">Left</button>
+                <button class="carousel-nav" data-direction="next" data-target="grim-all-day-carousel" aria-label="View next image in Grim All Day portfolio">Right</button>
             </div>
         
             <div class="project-details">
@@ -81,30 +89,36 @@
         <div class="carousel-wrapper">
             <div class="carousel-container" id="chum-carousel">
                 <div class="carousel-track">
-                    <div class="carousel-item">
-                        <img class="is-portrait" src="Chum 0.png" alt="Film Image 0">
+                    <div class="carousel-item" aria-hidden="false" tabindex="0">
+                        <img class="is-portrait" src="Chum 0.png" alt="a blue poster for the film 'Chum' the title is written in orange and stylized in a sans serif font that is slightly rounded with a small rounded element portruding out of the bottom of the 'U' into the center of the letter. Above the title is a drawing of a baseball hat clad man with a large beard that stretches all the way up to his sideburns. Half of his face is also obscured by a lobster claw.">
                     </div>
-                    <div class="carousel-item">
-                        <img src="Chum 1.jpg" alt="Film Image 1">
+                    <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                        <img src="Chum 1.jpg" alt="A group of people are on a beach. In the background we see a man lugging some collapsible beach chairs and a couple walking together away from shore. In the foreground of the image is a woman staring at the sea with what appears to be concern.">
                     </div>
-                    <div class="carousel-item">
-                        <img src="Chum 2.jpg" alt="Film Image 2">
+                    <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                        <img src="Chum 2.jpg" alt="A close cropped shot showing a pair of hands decorated with rings and white nail polish are holding a syringe and injecting into what appears to be a thigh with a tattoo of Lola Bunny playing basketball">
                     </div>
-                    <div class="carousel-item">
-                        <img src="Chum 3.jpg" alt="Film Image 3">
+                    <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                        <img src="Chum 3.jpg" alt="A group of three is gathered in a dimly lit room. A man is seated on a couch looking at a woman seated beside him on a lounge chair. Between them is a person crouched with their attention fixed on the thigh of the seated man, they are preparing to give him the injection shown in the previous picture">
                     </div>
-                    <div class="carousel-item">
-                        <img src="Chum 4.jpg" alt="Film Image 4">
+                    <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                        <img src="Chum 4.jpg" alt="A bloodied man is lying on the floor with his arms splayed out. A message written in blood on the floor reads 'CAUGHT ONE OF YOURS">
                     </div>
-                    <div class="carousel-item">
-                        <img src="Chum 5.jpg" alt="Film Image 5">
+                    <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                        <img src="Chum 5.jpg" alt="Close up of the bloodied man's face revealing a large, round, wound on the left side of his head and blood pooling around his mouth">
                     </div>
-                    <div class="carousel-item">
-                        <img src="Chum 6.jpg" alt="Film Image 6">
+                    <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                        <img src="Chum 6.jpg" alt="a couple is sitting around the couch with their hands around eachother. The woman is gazing at her phone while the man is chatting with a person. Behind them is a kitchen where someone appears to be chopping up ingredients.">
                     </div>
-                    <div class="carousel-item">
-                        <img src="Chum 7.jpg" alt="Film Image 7">
+                    <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                        <img src="Chum 7.jpg" alt="Close cropped photo of a pair of hands grasping at an object that is wrapped or locked around their neck and causing them to bleed">
                     </div>
+                    <div 
+                    class="visually-hidden" 
+                    aria-live="polite" 
+                    id="chum-status">
+                    Image 1 of 4 visible.
+                </div>
                 </div>
             </div>
             <div class="carousel-buttons">
@@ -121,21 +135,27 @@
             <div class="carousel-wrapper">
                 <div class="carousel-container" id="christmas-with-felicity-carousel">
                     <div class="carousel-track">
-                        <div class="carousel-item">
-                            <img class="is-portrait" src="christmaswithfelicity 1.jpg" alt="Film Image 0">
+                        <div class="carousel-item" aria-hidden="false" tabindex="0">
+                            <img class="is-portrait" src="christmaswithfelicity 1.jpg" alt="a movie poster for the film 'Christmas with Felicity' produced by nicely entertainment and featuring lead actors Sarah Brooks and Herb Porter standing beside eachother. Behind them is an archetypal rural small town street with a coat of snow on the red buildings and fencing.">
                         </div>
-                        <div class="carousel-item">
-                            <img src="christmaswithfelicity 2.png" alt="Film Image 1">
+                        <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                            <img src="christmaswithfelicity 2.png" alt="Felicity and her love interest are standing in front of each other. She is the object of his attention while her gaze appears distracted as if she's looking up and past him.">
                         </div>
-                        <div class="carousel-item">
-                            <img src="christmaswithfelicity 3.png" alt="Film Image 2">
+                        <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                            <img src="christmaswithfelicity 3.png" alt="Felicity looks distressed as she stands hunched over a slightly unkempt kitchen countertop on the phone.">
                         </div>
-                        <div class="carousel-item">
-                            <img src="christmaswithfelicity 4.png" alt="Film Image 3">
+                        <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                            <img src="christmaswithfelicity 4.png" alt="an employee at a holiday themed candy store looks on with a slightly strained smile.">
                         </div>
-                        <div class="carousel-item">
-                            <img src="christmaswithfelicity 5.png" alt="Film Image 4">
+                        <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                            <img src="christmaswithfelicity 5.png" alt="Felicity's face is closely cropped with eyes gazing to the left and a look of slight consternation.">
                         </div>
+                        <div 
+                        class="visually-hidden" 
+                        aria-live="polite" 
+                        id="christmas-with-felicity-status">
+                        Image 1 of 4 visible.
+                    </div>
                     </div>
                 </div>
                 <div class="carousel-buttons">
@@ -152,15 +172,21 @@
                 <div class="carousel-wrapper">
                     <div class="carousel-container" id="loner-carousel">
                         <div class="carousel-track">
-                            <div class="carousel-item">
-                                <img src="loner 1.png" alt="Film Image 1">
+                            <div class="carousel-item" aria-hidden="false" tabindex="0">
+                                <img src="loner 1.png" alt="The thumbnail for 'Loner' a music video for the band 'Dehd'. It features a woman in a short dress and angel wings looking off into the distance while seated on a desert road">
                             </div>
-                            <div class="carousel-item">
-                                <img src="loner 2.jpeg" alt="Film Image 2">
+                            <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                                <img src="loner 2.jpeg" alt="A close-up of the winged woman details her extravagent necklaces, excessively long and manicured nails, and a face made-up with pink blush, winged eyelashes, and glittery-purple eyeshadow.">
                             </div>
-                            <div class="carousel-item">
-                                <img src="loner 3.png" alt="Film Image 3">
+                            <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                                <img src="loner 3.png" alt="A devil like vixen with a red face, horns, and black lipstick stands beside a pole dancing pole with her eyes cast down in an authoritative manner.">
                             </div>
+                            <div 
+                            class="visually-hidden" 
+                            aria-live="polite" 
+                            id="loner-status">
+                            Image 1 of 4 visible.
+                        </div>
                         </div>
                     </div>
                     <div class="carousel-buttons">
@@ -182,7 +208,7 @@
             <div class="title-bar-controls">
               <button aria-label="Minimize" id="print-minimize-btn"></button>
               <button aria-label="Maximize" id="print-maximize-btn"></button>
-              <button aria-label="" inactive> <3 </button>
+              <button aria-hidden="true" inactive> <3 </button>
               </div>
         </div>
         <div class="sentinel"></div>
@@ -199,18 +225,24 @@
         <div class="carousel-wrapper">
             <div class="carousel-container" id="office-magazine-carousel">
                 <div class="carousel-track">
-                    <div class="carousel-item">
-                        <img src="officemag 1.jpeg" alt="Film Image 1">
+                    <div class="carousel-item" aria-hidden="false" tabindex="0">
+                        <img src="officemag 1.jpeg" alt="A diverse group of six individuals pose with confidence in distinct and stylish outfits against a grey backdrop for an 'Office Magazine' photoshoot.">
                     </div>
-                    <div class="carousel-item">
-                        <img class="is-portrait" src="officemag 2.jpeg" alt="Print Image 2">
+                    <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                        <img class="is-portrait" src="officemag 2.jpeg" alt="A woman in glittery see-through dress, with distinctly styled hair, and knee high boots poses in front of a blue backdrop with her arms raised but below her head.">
                     </div>
-                    <div class="carousel-item">
-                        <img class="is-portrait" src="officemag 3.jpeg" alt="Print Image 3">
+                    <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                        <img class="is-portrait" src="officemag 3.jpeg" alt="a digital collage of photos from the shoot. The through line of the images is a close cropped images of stylized hair, eyes, and lips">
                     </div>
-                    <div class="carousel-item">
-                        <img class="is-portrait" src="officemag 4.jpeg" alt="Print Image 4">
+                    <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                        <img class="is-portrait" src="officemag 4.jpeg" alt="A close-up photo of a woman's face adorned with glitter against a blue backdrop. A combination of lens filters, post-processing, and shutter speed gives a washed-out and dreamy effect that almost gives the appearance of being taken underwater.">
                     </div>
+                    <div 
+                    class="visually-hidden" 
+                    aria-live="polite" 
+                    id="office-magazine-status">
+                    Image 1 of 4 visible.
+                </div>
                 </div>
             </div>
             <div class="carousel-buttons">
@@ -227,21 +259,27 @@
             <div class="carousel-wrapper">
                 <div class="carousel-container" id="elle-magazine-carousel">
                     <div class="carousel-track">
-                        <div class="carousel-item">
-                            <img class="is-portrait" src="elle 1.jpeg" alt="Print Image 1">
+                        <div class="carousel-item" aria-hidden="false" tabindex="0">
+                            <img class="is-portrait" src="elle 1.jpeg" alt="Cover of an 'Elle' Magazine from  May 2023 featuring 'Young Miko' wearing a bucket hat with a long chain instead of a chinch, temporary jewlery accenting her eye makeup, a blue-green sweater worn around one arm and a pair of torn jeans held together with a series of grommets of chains.">
                         </div>
-                        <div class="carousel-item">
-                            <img src="elle 2.png" alt="Film Image 2">
+                        <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                            <img src="elle 2.png" alt="A woman in a ruffled, purple, ankle-length skirt and a blue blouse top reads while lying down on a bed in a sparsely decorated room filled with natural light from the bedside window.">
                         </div>
-                        <div class="carousel-item">
-                            <img class="is-portrait" src="elle 3.png" alt="Print Image 3">
+                        <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                            <img class="is-portrait" src="elle 3.png" alt="a woman in a grey suitcoat worn over a low cut top and blue denim jeans has her eyes closed and wired headphones in her ears. Superimposed over this photo in the bottom right is a black and white image of the same woman seated on a park bench with her legs crossed and her eyes cast down.">
                         </div>
-                        <div class="carousel-item">
-                            <img src="elle 4.png" alt="Print Image 4">
+                        <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                            <img src="elle 4.png" alt="a landscape photo of a woman in a cashmere jacket and leather gloves seated in the backseat of a car talking on a corded phone. Captioned underneath are #callmeback and #nocomment.">
                         </div>
-                        <div class="carousel-item">
-                            <img class="is-portrait" src="elle 5.png" alt="Print Image 5">
+                        <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                            <img class="is-portrait" src="elle 5.png" alt="A black and white portrait image of a woman leaning on a car in a short, plaid, skirt features a second, smaller landscape image in color superimposed above it and centered on the image. In this photo the woman is peering out of the window of the vintage car from the driver's seat.">
                         </div>
+                        <div 
+                        class="visually-hidden" 
+                        aria-live="polite" 
+                        id="elle-magazine-status">
+                        Image 1 of 4 visible.
+                    </div>
                     </div>
                 </div>
                 <div class="carousel-buttons">
@@ -258,18 +296,24 @@
                 <div class="carousel-wrapper">
                     <div class="carousel-container" id="IN-magazine-carousel">
                         <div class="carousel-track">
-                            <div class="carousel-item">
-                                <img class="is-portrait" src="inmag 1.png" alt="Print Image 1">
+                            <div class="carousel-item" aria-hidden="false" tabindex="0">
+                                <img class="is-portrait" src="inmag 1.png" alt="The cover image of an 'IN Magazine' photoshoot. A large pale yellow border containts the title 'Hair Today' stylized in a white, serifed, italicized font with a pink outline; and the subtitle 'Styles by Kylie North' in the center of the image is a photo of three women with intense gazes reflected in a mirror placed on satin curtain.">
                             </div>
-                            <div class="carousel-item">
-                                <img class="is-portrait" src="inmag 2.jpeg" alt="Film Image 2">
+                            <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                                <img class="is-portrait" src="inmag 2.jpeg" alt="A woman with red hair and dangling pearl earrings casts her gaze towards the ground and holds a sultry pose against a purple and green backdrop. The image is softly lit giving it a slightly dream-like feeling">
                             </div>
-                            <div class="carousel-item">
-                                <img class="is-portrait" src="inmag 3.png" alt="Print Image 3">
+                            <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                                <img class="is-portrait" src="inmag 3.png" alt="A portrait of a woman in a knit pink tube top, with black hair featuring a distinct curl up at the bottom, and black eye shadow forming a ring of spikes around her eyes strikes a strong pose while seated with her knees brought up to her chest. The image is softly lit giving it a slightly dream-like feeling">
                             </div>
-                            <div class="carousel-item">
-                                <img class="is-portrait" src="inmag 4.jpeg" alt="Print Image 4">
+                            <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                                <img class="is-portrait" src="inmag 4.jpeg" alt="A round mirror sitting on a purple satin curtain reflects three women. The two on the margins are obscured while the person in the center stands in a green dress with a repeating print of flowers. She has long, brown, curled hair and stares intensely. The image is softly lit giving it a slightly dream-like feeling">
                             </div>
+                            <div 
+                            class="visually-hidden" 
+                            aria-live="polite" 
+                            id="IN-magazine-status">
+                            Image 1 of 4 visible.
+                        </div>
                         </div>
                     </div>
                     <div class="carousel-buttons">
@@ -291,7 +335,7 @@
             <div class="title-bar-controls">
               <button aria-label="Minimize" id="sfx-minimize-btn"></button>
               <button aria-label="Maximize" id="sfx-maximize-btn"></button>
-              <button aria-label="" inactive> <3 </button>
+              <button aria-hidden="true" inactive> <3 </button>
               </div>
         </div>
         <div class="sentinel"></div>
@@ -306,15 +350,21 @@
         <div class="carousel-wrapper">
             <div class="carousel-container" id="reflections-carousel">
                 <div class="carousel-track">
-                    <div class="carousel-item">
-                        <img src="reflections 1.png" alt="SFX Image 1">
+                    <div class="carousel-item" aria-hidden="false" tabindex="0">
+                        <img src="reflections 1.png" alt="A close-up still image from the film 'Reflections' of a man's face highlighting make-up work that has significantly aged the actor's appearance">
                     </div>
-                    <div class="carousel-item">
-                        <img src="reflections 2.png" alt="SFX Image 2">
+                    <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                        <img src="reflections 2.png" alt="A close-up still image from the film 'Reflections' of a man's face highlighting make-up work that has significantly aged the actor's appearance with a focus on the eyes and facial hair">
                     </div>
-                    <div class="carousel-item">
-                        <img src="reflections 3.png" alt="SFX Image 3">
+                    <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                        <img src="reflections 3.png" alt="A zoomed out still image from the film 'Reflections' of a middle aged man sitting on a bench looking at the ground.">
                     </div>
+                    <div 
+                    class="visually-hidden" 
+                    aria-live="polite" 
+                    id="reflections-status">
+                    Image 1 of 4 visible.
+                </div>
                 </div>
             </div>
             <div class="carousel-buttons">
@@ -331,18 +381,24 @@
             <div class="carousel-wrapper">
                 <div class="carousel-container" id="beyond-desire-carousel">
                     <div class="carousel-track">
-                        <div class="carousel-item">
-                            <img src="beyonddesire 1.jpg" alt="SFX Image 1">
+                        <div class="carousel-item" aria-hidden="false" tabindex="0">
+                            <img src="beyonddesire 1.jpg" alt="A person with strikingly thin blue eyebrows, deep grey eyeshadow, and extra long eyelashes looks down, their head and upper body covered in colorful, dripping paint against a plain background.">
                         </div>
-                        <div class="carousel-item">
-                            <img src="beyonddesire 2.jpg" alt="SFX Image 2">
+                        <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                            <img src="beyonddesire 2.jpg" alt="A Person with green painted nails and nail-extensions in a slightly lighter shade crosses their hands over their chest, with their skin covered in colorful paint splatters and streaks.">
                         </div>
-                        <div class="carousel-item">
-                            <img src="beyonddesire 3.jpg" alt="SFX Image 3">
+                        <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                            <img src="beyonddesire 3.jpg" alt="A Person with their skin covered in colorful paint splatters and streaks kneels on the ground serving the camera an intense gaze. The intentional composition of the paint splatter is apparent in how the paint frames their chest giving the appearance of cleavage.">
                         </div>
-                        <div class="carousel-item">
-                            <img src="beyonddesire 4.jpg" alt="SFX Image 3">
+                        <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                            <img src="beyonddesire 4.jpg" alt="A disembodied hand in a black nitrile glove drips purple paint on the subject of the photoshoot. Their darkened lips, long lashes, intense grey eyeshadow that blends into white as it crosses into the brow area, and thin blue eyebrows that almost appear to be on a cloud formed by the white eyeshadow are featured prominently.">
                         </div>
+                        <div 
+                        class="visually-hidden" 
+                        aria-live="polite" 
+                        id="beyond-desire-status">
+                        Image 1 of 4 visible.
+                    </div>
                     </div>
                 </div>
                 <div class="carousel-buttons">
@@ -359,31 +415,36 @@
                 <div class="carousel-wrapper">
                     <div class="carousel-container" id="chum-sfx-carousel">
                         <div class="carousel-track">
-                                <div class="carousel-item">
-                                <img src="Chum sfx 8.jpg" alt="SFX Image 8">
+                                <div class="carousel-item" aria-hidden="false" tabindex="0">
+                                <img src="Chum sfx 8.jpg" alt="A hastily constructed wooden cage is situated on a bed of shale and radiates a glowing red light on a dark night. Portruding through the wood are mangled and bloody body parts that look eerily real.">
                             </div>
-                            <div class="carousel-item">
-                                <img src="Chum 2.jpg" alt="SFX Image 1">
+                            <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                                <img src="Chum 2.jpg" alt="A close cropped shot showing a pair of hands decorated with rings and white nail polish are holding a syringe and injecting into what appears to be a thigh with a tattoo of Lola Bunny playing basketball. The image highlights the realistic practical effect of a needle being plunged into someone's skin">
                             </div> 
-                            <div class="carousel-item">
-                                <img src="Chum sfx 2.jpg" alt="SFX Image 2">
+                            <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                                <img src="Chum sfx 2.jpg" alt="A close cropped shot showing a pair of hands decorated with rings firmly grasping a syringe and injecting deep into what appears to be a thigh with a tattoo of Lola Bunny playing basketball. The image highlights the realistic practical effect of a needle being plunged into someone's skin">
                             </div>
-                            <div class="carousel-item">
-                                <img src="Chum sfx 3.jpg" alt="SFX Image 3">
+                            <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                                <img src="Chum sfx 3.jpg" alt="A group of three is gathered in a dimly lit room. A man is seated on a couch looking at a woman seated beside him on a lounge chair. Between them is a person crouched with their attention fixed on the thigh of the seated man, they are preparing to give him the injection shown in the previous picture">
                             </div>
-                            <div class="carousel-item">
-                                <img src="Chum sfx 4.jpg" alt="SFX Image 4">
+                            <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                                <img src="Chum sfx 4.jpg" alt="A close up of a practical effect featuring a large hook burrowed deep in someones cheek and blood pouring out of the inciscion.">
                             </div>
-                            <div class="carousel-item">
-                                <img src="Chum 4.jpg" alt="SFX Image 5">
+                            <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                                <img src="Chum 4.jpg" alt="A bloodied man is lying on the floor with his arms splayed out. A message written in blood on the floor reads 'CAUGHT ONE OF YOURS. This image highlights the realistic practical effect work done to replicate real blood and realistic wounds.">
                             </div>
-                            <div class="carousel-item">
-                                <img src="Chum 5.jpg" alt="SFX Image 6">
+                            <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                                <img src="Chum 5.jpg" alt="Close up of the bloodied man's face revealing a large, round, wound on the left side of his head and blood pooling around his mouth. This image highlights the practical effect work on the wounds and the blood splatter.">
                             </div>
-                            <div class="carousel-item">
-                                <img src="Chum 7.jpg" alt="SFX Image 7">
+                            <div class="carousel-item" aria-hidden="true" tabindex="-1">
+                                <img src="Chum 7.jpg" alt="Close cropped photo of a pair of hands grasping at an object that is wrapped or locked around their neck and causing them to bleed. This image highlights the realistic blood effects beginning to pour out of the victim's neck.">
                             </div>
-                           
+                            <div 
+                            class="visually-hidden" 
+                            aria-live="polite" 
+                            id="chum-sfx-status">
+                            Image 1 of 4 visible.
+                        </div>
                         </div>
                     </div>
                     <div class="carousel-buttons">
@@ -396,42 +457,42 @@
                         <p class="project-credit">Directed by John Cicco<br></p>
                         <p class="project-role">Hair Stylist, Makeup Artist, Special Effects</p>
                     </div>
-        </div> <!-- End of sfx-content -->
-    </section>
+        </div> 
+    
 </div>
+</section>
 </main>
-
-    <footer>
-        <div class="footer-top">
-            <div class="footer-box footer-return-box">
-                <a href="#">Return to Top</a>
-            </div>
-            <div class="footer-box footer-home-box">
-                <a href="index.html">Homepage</a>
-            </div>
-          
+<footer>
+    <div class="footer-top">
+        <div class="footer-box footer-return-box">
+            <a href="#" aria-label="Return to the top of the page">Return to Top</a>
         </div>
-        <div class="footer-middle">
-            <div class="footer-box footer-ig-box">
-                <a href="https://www.instagram.com/sweetbbjane/?hl=en">Instagram</a>
-            </div>
-                <div class="footer-box-imdb">
-                    <a href="https://www.imdb.com/name/nm12645938/">IMDB</a>
-                </div>
-          <div class="footer-box footer-contact-box">
-                <a href="#">Contact</a>
-            </div>
+        <div class="footer-box footer-home-box">
+            <a href="index.html" aria-label="Return to the homepage">Homepage</a>
         </div>
-        <div class="footer-bottom">
-            <p>2025 Jane Serenska | All Rights Reserved.</p>
+      
+    </div>
+    <div class="footer-middle">
+        <div class="footer-box footer-ig-box">
+            <a href="https://www.instagram.com/sweetbbjane/?hl=en" aria-label="Link to Jane's Instagram"> Instagram</a>
         </div>
-    </footer>
+            <div class="footer-box footer-imdb-box">
+                <a href="https://www.imdb.com/name/nm12645938/" aria-label="Link to Jane's IMDB">IMDB</a>
+            </div>
+      <div class="footer-box footer-contact-box">
+        <a href="mailto:janeserenska@gmail.com" aria-label="Open email client to contact Jane">Contact</a>            
+    </div>
+    </div>
+    <div class="footer-bottom">
+        <p>2025 Jane Serenska | All Rights Reserved.</p>
+    </div>
+</footer>
     <script>
         // Add minimize/maximize functionality for all sections
         document.addEventListener('DOMContentLoaded', () => {
             // Film section
-            const filmMinimizeBtn = document.getElementById('minimize-btn');
-            const filmMaximizeBtn = document.getElementById('maximize-btn');
+            const filmMinimizeBtn = document.getElementById('film-minimize-btn');
+            const filmMaximizeBtn = document.getElementById('film-maximize-btn');
             const filmSection = document.querySelector('.film-section');
             
             // Print section

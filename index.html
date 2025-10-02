@@ -11,7 +11,7 @@
     <header>
     <div class="logo">
         <a href="index.html">
-    <img src="jane logo 2.png" alt="Company Logo">
+    <img src="jane logo 2.png" alt="a clickable wordmark logo that reads 'Jane Serenska' with drawn images of bobby pins and a hand putting eyeshadow on to the right of the text">
         </a>
         </div>
         <nav class="menu">
@@ -23,19 +23,24 @@
         </nav>              
     </header>
     <main>
+        <section>
            <div class="vertical-header-decoration"></div>
-        <div class="field-border-disabled" style="padding: 20px">
+        <div class="field-border-disabled" style="">
             <div class="bio-card">
                 <h5 class="card-title">About Jane</h5>
-                <iframe class="jspaint" src="jspaint/index.html" id="jspaint-iframe" width="100%" height="100%"></iframe>
+                <iframe class="jspaint" 
+                        src="jspaint/index.html" 
+                        id="jspaint-iframe" 
+                        width="100%" height="100%" 
+                        title="Jane's about me section is housed here in a working microsoft paint emulator and reads: 'Jane Serenska is a New York and Chicago based hair stylist, makeup artist, and special effects artist'"></iframe>
             </div>
-   
+   <section class="work-sample-card">
+    <h5 class="card-title">Check out some of her work</h5>
+    <div class="portfolio-bins-container">
 
-    <div class="work-sample-card">
-        <h5 class="card-title">Check out some of her work</h5>
-        <div class="portfolio-bins-container">
             <div class="portfolio-bin">
-                <a href="portfolio.html#film"><h4 class="bin-text">Film</h4>
+                <a href="portfolio.html#film">
+                    <h4 class="bin-text">Film</h4>
                 </a>
             </div>
         
@@ -50,30 +55,29 @@
             </div>
         </div>
     </div>
-    </div>  
-     </div>
+        </section>
      <div class="vertical-header-decoration-2"></div>
     </main>
 <footer>
     <div class="footer-top">
         <div class="footer-box footer-return-box">
-            <a href="#">Return to Top</a>
+            <a href="#" aria-label="Return to the top of the page">Return to Top</a>
         </div>
         <div class="footer-box footer-home-box">
-            <a href="index.html">Homepage</a>
+            <a href="index.html" aria-label="Return to the homepage">Homepage</a>
         </div>
       
     </div>
     <div class="footer-middle">
         <div class="footer-box footer-ig-box">
-            <a href="https://www.instagram.com/sweetbbjane/?hl=en"> Instagram</a>
+            <a href="https://www.instagram.com/sweetbbjane/?hl=en" aria-label="Link to Jane's Instagram"> Instagram</a>
         </div>
             <div class="footer-box footer-imdb-box">
-                <a href="https://www.imdb.com/name/nm12645938/"> IMDB</a>
+                <a href="https://www.imdb.com/name/nm12645938/" aria-label="Link to Jane's IMDB">IMDB</a>
             </div>
       <div class="footer-box footer-contact-box">
-            <a href="#">Contact</a>
-        </div>
+        <a href="mailto:janeserenska@gmail.com" aria-label="Open email client to contact Jane">Contact</a>            
+    </div>
     </div>
     <div class="footer-bottom">
         <p>2025 Jane Serenska | All Rights Reserved.</p>
@@ -166,5 +170,6 @@
         resizeTimeout = setTimeout(handleScreenSize, 200); // Wait 200ms after resizing stops
     });
 </script>
+
 </body>
 </html>
