@@ -426,7 +426,7 @@ main {
         text-align: center;
     }
 
-    section.work-sample-card {
+    .work-sample-card {
         background: #1cace4;
         margin: 2px auto;
         width: 100%;
@@ -1888,7 +1888,7 @@ button:hover {
 
     }
 
-    section.work-sample-card {
+    .work-sample-card {
         width:95%; /* Let the work sample card be wider to fill the space */
         padding: 0rem;
         margin: 2rem auto 1rem auto;
@@ -2210,7 +2210,7 @@ img.corner-image {
 
 
 /* Work Sample Card (Carousel Wrapper) */
-section.work-sample-card {
+.work-sample-card {
     margin: 2rem auto 0rem auto; 
     width: 80%; /* Increased width to fill the space */
     max-width: 1600px; /* Allows it to be very wide */
