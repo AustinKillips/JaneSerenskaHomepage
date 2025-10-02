@@ -410,6 +410,8 @@ main {
         width: 65% !important;
         max-height: 55px;
         max-width: none !important;
+        display: block;
+        text-align: center;
     }
 
     .work-sample-card {
