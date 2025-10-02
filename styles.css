@@ -414,6 +414,7 @@ main {
 .contact-title {
     margin-bottom: 0rem;
     margin-top: 0rem;
+    display: block;
     text-align: center;
     }
 
