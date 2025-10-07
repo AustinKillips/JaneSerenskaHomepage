@@ -143,6 +143,7 @@ header {
     width: 76%;
     height: 5px;
     margin: 0rem auto 1rem auto;
+}
 
 .vertical-header-decoration-2 {
     rotate:calc(180deg);
@@ -424,6 +425,7 @@ main {
         max-width: none !important;
         display: block;
         text-align: center;
+        margin: auto;
     }
 
     .work-sample-card {
@@ -834,16 +836,20 @@ button:hover {
 }
 
 /* This is the CSS Styling for the Portfolio sections */
-        .title {
+        h1.title {
         margin-bottom: .5rem;
         margin-top: .25rem;
         text-align: center;
+        display: block;
         }
 
-        .title picture img {
+        h1.title picture img {
             width: 85% !important;
             max-height: 65px;
             max-width: none !important;
+            text-align: center;
+            margin: auto;
+            display: block;
         }
           
        .title-bar {
@@ -1258,6 +1264,11 @@ button:hover {
             border-top: 2px dotted #000;
             font-style: italic;
         }
+
+            .contact-field-border-disabled {
+      display: hidden;
+      margin-top: -1.2rem;
+    }
 /*
   Media Queries for larger screens (e.g., Tablets and Desktops)
   The styles inside these blocks will only apply when the screen is wide enough.
@@ -1357,7 +1368,7 @@ button:hover {
     .contact-field-border-disabled {
         background: #c0c0c07b;
         padding: 2px;
-        margin: auto 4rem auto 4rem;
+        margin: 1rem 4rem auto 4rem;
         box-shadow: inset
         -1px -1px #ffffff,
          1px 1px #808080,
@@ -1416,6 +1427,18 @@ button:hover {
         max-height: 75px;
         max-width: none !important;
     }
+
+        .contact-title {
+        margin-bottom: .5rem;
+        margin-top: .25rem;
+        text-align: center;
+        }
+    
+        .contact-title picture img {
+            width: 85% !important;
+            max-height: 55px;
+            max-width: none !important;
+        }
 
     img.corner-image {
         position: absolute;
@@ -1695,6 +1718,7 @@ button:hover {
     .contact-field-border-disabled {
         background: #c0c0c07b;
         padding: 2px;
+        padding-top: 0px;
         margin: 0rem auto 0rem auto;
         box-shadow: inset
         -1px -1px #ffffff,
@@ -1802,7 +1826,7 @@ button:hover {
         }
     
         .contact-title picture img {
-            width: 55% !important;
+            width: 105% !important;
             max-height: 55px;
             max-width: none !important;
         }
@@ -1911,8 +1935,6 @@ button:hover {
     }
 
     /* Carousel */
-
-.title
 
 .film-section {
     max-width: 50vw;
@@ -2133,6 +2155,7 @@ header {
     margin-bottom: 1rem;
     margin-top: 1rem;
     text-align: center;
+    display: block;
     }
 
     .title picture img {
@@ -2145,6 +2168,8 @@ header {
     width: 60% !important; /* Smaller contact title image */
     max-height: 80px;
     max-width: none !important;
+    display: block;
+    margin: auto;
 }
 
 .field-border-disabled {
