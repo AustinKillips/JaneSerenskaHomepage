@@ -752,7 +752,7 @@ button:hover {
 /* 5. The Image */
 #lightbox-image {
     display: block;
-    max-width: 73vw;
+    max-width: 60vw;
     max-height: 62vh; /* Image fills its container */
     object-fit: contain; 
     margin: 0 auto;
@@ -769,6 +769,11 @@ button:hover {
 #close-modal:focus {
     /* Ensure a clear focus indicator despite 98.css styling */
     outline: 2px solid blue; 
+}
+
+.field-border {
+    width: fit-content;
+    height: fit-content;
 }
 
 /* The single, unified overlay for text */
@@ -1808,13 +1813,13 @@ button:hover {
 
 
     /* Title section (if still needed, ensure it's outside the header or positioned correctly) */
-    .title {
+    h1.title {
         margin-bottom: 0.5rem;
         margin-top: 0.5rem;
         text-align: center;
     }
-        .title picture img {
-            width: 40% !important;
+        h1.title picture img {
+            width: 55% !important;
             max-height: 75px;
             max-width: none !important;
         }
@@ -2151,15 +2156,15 @@ header {
 
 /* Titles */
 .title,
-.contact-title {
+h1.contact-title {
     margin-bottom: 1rem;
     margin-top: 1rem;
     text-align: center;
     display: block;
     }
 
-    .title picture img {
-        width: 30% !important; /* Slightly smaller title image */
+    h1.title picture img {
+        width: 45% !important; /* Slightly smaller title image */
         max-height: 80px; /* Slightly taller */
         max-width: none !important;
     }
