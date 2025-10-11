@@ -1256,8 +1256,26 @@ button:hover {
 
         .project-title {
             background-color: var(--border-color-bio);
+            color: var(--text-color-primary);
+            text-decoration: none;
             font-weight: bold;
+            display: block;
+            padding-bottom: .2rem;
+            transition: all 0.1s ease-in-out;
+            border-style: solid;
+            border-width: 2px;
+            border-top-color: #fff;
+            border-left-color: #fff;
+            border-right-color: #555;
+            border-bottom-color: #555;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.)
+        }
 
+        .project-title.no-link {
+            cursor: default; /* Change cursor from a hand pointer */
+            text-decoration: none; /* In case the <a> had an underline */
+            /* Add the text you need */
+            border: none;
         }
 
         .project-credit {
