@@ -139,7 +139,7 @@ header {
 
 .vertical-header-decoration {
     /* Revised: Change width to % to fit the header container */
-    background-image: url(ocean.gif);
+    background-image: url(assets/homepage/ocean.gif);
     width: 76%;
     height: 5px;
     margin: 0rem auto 1rem auto;
@@ -147,7 +147,7 @@ header {
 
 .vertical-header-decoration-2 {
     rotate:calc(180deg);
-    background-image: url("ocean.gif");
+    background-image: url("assets/homepage/ocean.gif");
     width: 99%; /* Now spans the full width of its parent */
     height: 5px;
     margin: 1rem 0rem 0rem 0rem;
@@ -432,8 +432,8 @@ main {
         background: #1cace4;
         margin: 2px auto;
         width: 100%;
-        max-width: 95vw;
-        margin: 1rem 0rem 0rem 0rem;
+        max-width: 82vw;
+        margin: 1rem auto 0rem auto;
         border-style: solid;
         border-top-color: #555;
         border-left-color: #555;
@@ -518,6 +518,7 @@ main {
     
     /* Text inside the overlay */
     .bin-text {
+        font-size: larger;
         text-align: center;
         padding: .5rem;
         border-top-color: #888;
@@ -1435,8 +1436,8 @@ button:hover {
          1px 1px #808080,
          -2px -2px #dfdfdf,
          2px 2px #0a0a0a;
-         min-width: 85vw;
-         max-width: 90vw;
+        width: 70cqw;
+        max-width: 900px;
     }
 
     .contact-field-border-disabled {
@@ -1475,18 +1476,18 @@ button:hover {
 
     .vertical-header-decoration {
         /* Revised: Change width to % to fit the header container */
-        background-image: url("ocean.gif");
-        min-width: 85vw;
-        max-width: 90vw;
+        background-image: url("assets/homepage/ocean.gif");
+        width: 70cqw;
+        max-width: 900px;
         height: 5px;
         /* Move it below the header using a top margin */
         margin: 0rem 0rem 1rem 0rem;
     }
     .vertical-header-decoration-2 {
         rotate:calc(180deg);
-        background-image: url("ocean.gif");
-        min-width: 85vw;
-        max-width: 90vw;
+        background-image: url("assets/homepage/ocean.gif");
+        width: 70cqw;
+        max-width: 900px;
         height: 5px;
         margin: 1rem 0rem 0rem 0rem;
     }
@@ -1555,8 +1556,6 @@ button:hover {
         margin: auto;
         align-self: flex-start;
         position: relative;
-        min-height: 25vh;
-        max-height: 28.5vh;
         min-width: 250px;
         max-width: 600px;
     }
@@ -1565,9 +1564,11 @@ button:hover {
         position: relative;
         width: 100%;
         height: 100%;
-        min-height: 26vh;
+        min-height: 240px;
+
     }
     
+ 
 
     .bio-text {
     padding: 0rem 2.5rem 0rem 2.5rem; /* Adjust padding to separate text from images */
@@ -1580,7 +1581,7 @@ button:hover {
         width: 45vw;
         height: 10vw;
         margin: 0rem 0rem 0rem 3rem;
-        scale: ;
+        scale: 
     }   
 
 .portfolio-bins-container {
@@ -1595,51 +1596,6 @@ button:hover {
         font-size: xx-large;
         padding: 1rem;
     }
-/* 
-
-.gallery-grid-container {
-    /* * Essential for swiping: Defines the area visible to the user 
-     * We'll use aspect-ratio to keep the container square (2 columns wide, 2 rows high).
-     * Adjust max-width/height as needed for your design.
-     */
-    width: 100%;
-    max-width: 200px; /* Example size */    
-    aspect-ratio: auto;
-    /* * Enable horizontal scrolling and hide the default scrollbar 
-     */
-    overflow-x: scroll;
-    overflow-y: hidden; 
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 100%; /* Each page (group of items) takes 100% width */
-    grid-template-rows: repeat(2, 1fr); /* Force only 2 rows total */
-    scroll-snap-type: x mandatory;
-    margin: auto;
-    margin-top: .5rem;
-    gap: .5rem;
-
-}
-
-/* Hide scrollbar in WebKit browsers (Chrome, Safari) 
-.gallery-grid-container::-webkit-scrollbar {
-    display: none;
-}
-
-.gallery-item {
-    /* Each item snaps to a 1/2 height and 1/2 width within the viewport */
-    scroll-snap-align: start; /* Snap the start edge of the item */
-    
-    /* If you used the fixed 2-row method in B: */
-    width: calc(100% / 1); 
-    height: 80%; /* It takes up 100% of its assigned grid row (1/2 the container height) */
-    /* Visual feedback */
-    border: 1px solid #c0c0c0; 
-    padding: 0;
-    margin: 0;
-}
-
 
 .gallery-section {
     width: 83vw;
@@ -1822,15 +1778,12 @@ button:hover {
     .field-border-disabled {
         background: #c0c0c07b;
         padding: 40px;
-  
         box-shadow: inset
         -1px -1px #ffffff,
          1px 1px #808080,
          -2px -2px #dfdfdf,
          2px 2px #0a0a0a;
-         max-width: 650px;
-         min-width: 55vw;
-         max-width: 1050px;
+         max-width: 1095px;   
          min-height: 40vh;
     }
 
@@ -1905,7 +1858,7 @@ button:hover {
     /* Vertical Header Decoration - Adjusted to fit the new layout */
     .vertical-header-decoration {
         /* Revised: Change width to % to fit the header container */
-        background-image: url("Assets/homepage/ocean.gif");
+        background-image: url("assets/homepage/ocean.gif");
         max-width: 650px;
         min-width: 55vw;
         max-width: 1050px;
@@ -1916,7 +1869,7 @@ button:hover {
 
     .vertical-header-decoration-2 {
         /* Revised: Change width to % to fit the header container */
-        background-image: url("Assets/homepage/ocean.gif");
+        background-image: url("assets/homepage/ocean.gif");
         max-width: 650px;
         min-width: 55vw;
         max-width: 1050px;
@@ -1992,15 +1945,15 @@ button:hover {
     margin: auto;
     align-self: flex-start;
     min-width: 35vw;
-    min-height: 26vh;
-    max-height: 28vh;
+    height: 28vh;
 }
 
 .jspaint {
     position: relative;
     height: 100%;
     width: 100%;
-}
+    max-height: 22vh;
+    }
     
     .bio-card-2 {
         width: 35vw;
@@ -2174,13 +2127,19 @@ button:hover {
 @media screen and (min-width: 1440px) {
 
 
-.vertical-header-decoration-2 {
-    width: 55vw;
+.bio-card {
+    padding: 0rem;
+    margin: auto;
+    align-self: flex-start;
+    min-width: 35vw;
+    height: 26vh;
 }
 
 .jspaint {
+    position: relative;
     height: 100%;
-    width: 100%;   
+    width: 100%;
+    max-height: 22vh !important;
 }
 
 }
@@ -2251,7 +2210,7 @@ header {
 
 .vertical-header-decoration {
     /* Revised: Change width to % to fit the header container */
-    background-image: url("ocean.gif");
+    background-image: url("assets/homepage/ocean.gif");
     min-width: 49vw;
     max-width: 1050px;    height: 5px;
     /* Move it below the header using a top margin */
@@ -2259,7 +2218,7 @@ header {
 }
 .vertical-header-decoration-2 {
     rotate:calc(180deg);
-    background-image: url("ocean.gif");
+    background-image: url("assets/homepage/ocean.gif");
     min-width: 49vw;
     max-width: 1050px;
     height: 5px;
@@ -2298,11 +2257,19 @@ h1.contact-title {
      padding-bottom: 40px;
 }
 
+.bio-card {
+    padding: 0rem;
+    margin: auto;
+    align-self: flex-start;
+    min-width: 35vw;
+    max-height: 24vh;
+}
+
 .jspaint {
     position: relative;
     height: 100%;
     width: 100%;
-    margin: auto;
+    max-height: 26vh;
 }
 
 /* Top Bio Row */
@@ -2320,7 +2287,7 @@ h1.contact-title {
 .bio-card {
         /* Adjusted height for more content space */
         width: 100%; 
-        min-height: 30vh;
+        height: 28vh;
         min-width: 30vw;
     }
 
