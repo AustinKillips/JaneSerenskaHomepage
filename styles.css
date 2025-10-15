@@ -444,7 +444,7 @@ main {
     
     .portfolio-bins-container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /* Creates a 3-column grid */
+        grid-template-columns: repeat(1, 1fr); /* Creates a 3-column grid */
         height: fit-content;
         gap: .6rem;
         max-width: 100%;
@@ -634,7 +634,53 @@ button:hover {
     
   }
 
+
+/*concept zone*/
+.gallery-grid-container {
+    /* * Essential for swiping: Defines the area visible to the user 
+     * We'll use aspect-ratio to keep the container square (2 columns wide, 2 rows high).
+     * Adjust max-width/height as needed for your design.
+     */
+    width: 90%;
+    max-width: 400px; /* Example size */
+    aspect-ratio: 1 / 1; 
+    
+    /* * Enable horizontal scrolling and hide the default scrollbar 
+     */
+    overflow-x: scroll;
+    overflow-y: hidden; 
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%; /* Each page (group of items) takes 100% width */
+    grid-template-rows: repeat(2, 1fr); /* Force only 2 rows total */
+    scroll-snap-type: x mandatory;
+    padding-left: 10rem;
+    margin: auto;
+    margin-top: .5rem;
+    gap: .5rem;
+
+}
+
+/* Hide scrollbar in WebKit browsers (Chrome, Safari) */
+.gallery-grid-container::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-item {
+    /* Each item snaps to a 1/2 height and 1/2 width within the viewport */
+    scroll-snap-align: start; /* Snap the start edge of the item */
+    
+    /* If you used the fixed 2-row method in B: */
+    width: calc(100% / 1); 
+    height: 93%; /* It takes up 100% of its assigned grid row (1/2 the container height) */
+    
+    /* Visual feedback */
+    border: 1px solid #c0c0c0; 
+}
 /* This is the CSS Styling for the Gallery Section */
+
 
 .gallery-section {
     margin: auto;
@@ -650,6 +696,11 @@ button:hover {
     margin: auto 1rem auto 1rem;
     }
    
+    .gallery-section.minimized {
+        height: 30px; 
+        overflow: hidden; 
+    }
+
 .gallery-section h2 {
     font-size: 2rem;
     position: sticky;
@@ -1505,15 +1556,16 @@ button:hover {
         align-self: flex-start;
         position: relative;
         min-height: 25vh;
-        max-height: 25.5vh;
+        max-height: 28.5vh;
         min-width: 250px;
         max-width: 600px;
     }
 
     .jspaint {
         position: relative;
-        min-width: 100%;
-        min-height: 99%;
+        width: 100%;
+        height: 100%;
+        min-height: 26vh;
     }
     
 
@@ -1534,7 +1586,7 @@ button:hover {
 .portfolio-bins-container {
     padding: 2rem;
     width: 100%;
-    grid-template-columns: repeat(3, 1fr); /* Creates a 2-column grid */
+    grid-template-columns: repeat(1, 1fr); /* Creates a 2-column grid */
     gap: 1rem; /* Increases space between bins */
 }
 
@@ -1543,7 +1595,51 @@ button:hover {
         font-size: xx-large;
         padding: 1rem;
     }
-/* This is the CSS Styling for the Gallery sections */
+/* 
+
+.gallery-grid-container {
+    /* * Essential for swiping: Defines the area visible to the user 
+     * We'll use aspect-ratio to keep the container square (2 columns wide, 2 rows high).
+     * Adjust max-width/height as needed for your design.
+     */
+    width: 100%;
+    max-width: 200px; /* Example size */    
+    aspect-ratio: auto;
+    /* * Enable horizontal scrolling and hide the default scrollbar 
+     */
+    overflow-x: scroll;
+    overflow-y: hidden; 
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%; /* Each page (group of items) takes 100% width */
+    grid-template-rows: repeat(2, 1fr); /* Force only 2 rows total */
+    scroll-snap-type: x mandatory;
+    margin: auto;
+    margin-top: .5rem;
+    gap: .5rem;
+
+}
+
+/* Hide scrollbar in WebKit browsers (Chrome, Safari) 
+.gallery-grid-container::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-item {
+    /* Each item snaps to a 1/2 height and 1/2 width within the viewport */
+    scroll-snap-align: start; /* Snap the start edge of the item */
+    
+    /* If you used the fixed 2-row method in B: */
+    width: calc(100% / 1); 
+    height: 80%; /* It takes up 100% of its assigned grid row (1/2 the container height) */
+    /* Visual feedback */
+    border: 1px solid #c0c0c0; 
+    padding: 0;
+    margin: 0;
+}
+
 
 .gallery-section {
     width: 83vw;
@@ -1902,10 +1998,8 @@ button:hover {
 
 .jspaint {
     position: relative;
-    max-height: 27.5vh;
-    min-width: 34vw;
+    height: 100%;
     width: 100%;
-    min-height: 25.5vh;
 }
     
     .bio-card-2 {
@@ -2072,7 +2166,7 @@ button:hover {
     .portfolio-bins-container {
         padding: 2rem 2rem 2rem 2rem;
         width: 100%;
-        grid-template-columns: repeat(3, 1fr); /* Creates a 2-column grid */
+        grid-template-columns: repeat(1, 1fr); /* Creates a 2-column grid */
         gap: 1rem; /* Increases space between bins */
     }
 }
@@ -2085,8 +2179,8 @@ button:hover {
 }
 
 .jspaint {
-
-    
+    height: 100%;
+    width: 100%;   
 }
 
 }
@@ -2206,8 +2300,8 @@ h1.contact-title {
 
 .jspaint {
     position: relative;
-    min-height: 28vh;
-    min-width: 29vw;
+    height: 100%;
+    width: 100%;
     margin: auto;
 }
 
@@ -2267,7 +2361,7 @@ img.corner-image {
 .portfolio-bins-container {
     padding: 2.5rem 2.5rem 2.5rem 2.5rem;
     width: 100%;
-    grid-template-columns: repeat(3, 1fr); /* Creates a 2-column grid */
+    grid-template-columns: repeat(1, 1fr); /* Creates a 2-column grid */
     gap: 1rem; /* Increases space between bins */
 }
 
@@ -2298,7 +2392,7 @@ footer {
     .portfolio-bins-container {
         padding: 2rem 2rem 2rem 2rem;
         width: 100%;
-        grid-template-columns: repeat(3, 1fr); /* Creates a 2-column grid */
+        grid-template-columns: repeat(1, 1fr); /* Creates a 2-column grid */
         gap: 1rem; /* Increases space between bins */
     }
 }
