@@ -1905,7 +1905,7 @@ button:hover {
     /* Vertical Header Decoration - Adjusted to fit the new layout */
     .vertical-header-decoration {
         /* Revised: Change width to % to fit the header container */
-        background-image: url("ocean.gif");
+        background-image: url("assets/homepage/ocean.gif");
         max-width: 650px;
         min-width: 55vw;
         max-width: 1050px;
@@ -1916,7 +1916,7 @@ button:hover {
 
     .vertical-header-decoration-2 {
         /* Revised: Change width to % to fit the header container */
-        background-image: url("ocean.gif");
+        background-image: url("assets/homepage/ocean.gif");
         max-width: 650px;
         min-width: 55vw;
         max-width: 1050px;
